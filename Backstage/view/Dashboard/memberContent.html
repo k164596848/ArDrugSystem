@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./style/main.css" rel="stylesheet">
+  <style>
+    body {
+      /*
+        background-image: url("https://via.placeholder.com/300x300/FFFFFF/DDDDDD?text=BOXO");
+        background-repeat: repeat;
+*/
+    }
+
+    #dashboard div.card .card-body-icon {
+      position: absolute;
+      z-index: 0;
+      top: 7px;
+      right: -24px;
+      font-size: 4rem;
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+
+    #dashboard-carousel-obj .carousel-inner>.item>img {
+      max-height: 350px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body id="websiteIndex-body">
+  <div class="frame-wrapper container container-fluid ">
+    <div id="content-panel" class="optOpen">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <blockquote id="welcomeTitle" class="marginBottom-0">
+            <p></p>
+          </blockquote>
+        </div>
+      </div>
+      
+     <!-- 以下為人員管理版 -->
+      <div id="content-wrapper" class="panel panel-default">
+        <div class="panel-body">
+          <h3>
+            <span class="label label-default">人員管理</span>
+          </h3>
+          <div class="row container-fluid marginTop-20 dashboard">
+            <div class="col-md-4 col-sm-6">
+              <div class="card div-shadow">
+                <div class="card-header">
+                  <h4 id="card-title">
+                    <span class="fa fa-caret-square-o-up" aria-hidden="true"></span>
+                    <small class="pull-right">
+                      <span class="label label-success">人員</span>
+                    </small>
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <h3 id="equtotcount">部門維護</h3>
+                </div>
+                <a class="card-footer clearfix" data-toggle='modal' data-target='#departmentListModal' href="#">
+                  <span class="float-left">更多</span>
+                  <span class="float-right">
+                    <i class="fa fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card div-shadow">
+                <div class="card-header">
+                  <h4 id="card-title">
+                    <span class="fa fa-caret-square-o-down" aria-hidden="true"></span>
+                    <small class="pull-right">
+                      <span class="label label-success">人員</span>
+                    </small>
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <h3 id="equtotcount">主管維護</h3>
+                </div>
+                <a class="card-footer clearfix modal-title" data-toggle='modal' data-target='#managerListModal' href="#">
+                  <span class="float-left">更多</span>
+                  <span class="float-right">
+                    <i class="fa fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+   <!-- departmentListModal -->
+      <div class="modal fade" id="departmentListModal" tabindex="-1" role="dialog" aria-labelledby="departmentModalLabel">
+        <div class="modal-dialog modal-md " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="departmentModalLabel">部門管理</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12 assist_tool">
+                  <button class="btn btn-info" data-toggle='modal' data-target='#adddepartmentModal'>
+                    <span class="fa fa-plus"></span>新增部門</button>
+                </div>
+              </div>
+              <hr>
+              <div class="row container-fluid" id="adminDashboard">
+                <div class="col-md-12">
+                  <div class="table-responsive">
+                    <table id="departmentListTable" class=" table table-striped table-bordered" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>部門編號</th>
+                          <th style="max-width: 250px;">部門名稱</th>
+                          <th>動作</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+
+              </form>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+  <!-- departmentListModal end -->
+
+  <!-- adddepartmentModal -->
+      <div class="modal fade" id="adddepartmentModal" tabindex="-1" role="dialog" aria-labelledby="adddepartModalLabel">
+        <div class="modal-dialog modal-md " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="adddepartModalLabel">新增部門</h4>
+            </div>
+            <div class="modal-body">
+              <form id="adddepartForm" role="form" data-toggle="validator">
+                <div class="form-group ">
+                  <label for="departid" class="control-label">部門編號</label>
+                  <input type="text" class="form-control" name="departid" id="departid" required>
+                </div>
+
+                <div class="form-group ">
+                  <label for="departmentname" class="control-label">部門名稱</label>
+                  <input type="text" class="form-control" name="departmentname" id="departmentname" required>
+                </div>    
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-success" id="adddepartBT">新增</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- adddepartmentModal end-->
+
+   <!-- editdepartModal -->
+    <div class="modal fade" id="editdepartModal" tabindex="-1" role="dialog" aria-labelledby="editdepartModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="editdepartModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <form id="editUserForm" role="form" data-toggle="validator">
+              <div class="form-group">
+                <label for="editdepartid" class="control-label">部門編號</label>
+                <input type="text" class="form-control" name="editdepartid" id="editdepartid" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="editdepartment" class="control-label">部門名稱</label>
+                <input type="text" class="form-control" name="editdepartment" id="editdepartment" required>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-success" id="editdepartBT">儲存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- editdepartModal end-->
+
+  <!-- managerListModal -->
+      <div class="modal fade" id="managerListModal" tabindex="-1" role="dialog" aria-labelledby="managerModalLabel">
+        <div class="modal-dialog modal-lg " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="managerModalLabel">主管管理</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12 assist_tool">
+                  <button class="btn btn-info" data-toggle='modal' data-target='#addmanagerModal'>
+                    <span class="fa fa-plus"></span>新增主管</button>
+                </div>
+              </div>
+              <hr>
+              <div class="row container-fluid" id="adminDashboard">
+                <div class="col-md-12">
+                  <div class="table-responsive">
+                    <table id="managerListTable" class=" table table-striped table-bordered" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>主管編號</th>
+                          <th style="max-width: 250px;">主管名稱</th>
+                         <th style="max-width: 250px;">主管分機</th>
+                          <th style="max-width: 250px;">主管信箱</th>
+                          <th>動作</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+
+              </form>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+  <!-- managerListModal end -->
+
+  <!-- addmanagerModal -->
+      <div class="modal fade" id="addmanagerModal" tabindex="-1" role="dialog" aria-labelledby="addmanaModalLabel">
+        <div class="modal-dialog modal-sm " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="addmanaModalLabel">新增主管</h4>
+            </div>
+            <div class="modal-body">
+              <form id="addmanaForm" role="form" data-toggle="validator">
+                <div class="form-group ">
+                  <label for="manaid" class="control-label">主管編號</label>
+                  <input type="text" class="form-control" name="manaid" id="manaid" required>
+                </div>
+                <div class="form-group ">
+                  <label for="managername" class="control-label">主管名稱</label>
+                  <input type="text" class="form-control" name="managername" id="managername" required>
+                </div>
+				<div class="form-group ">
+                  <label for="mana_extension" class="control-label">主管分機</label>
+                  <input type="text" class="form-control" name="mana_extension" id="mana_extension" required>
+                </div>
+				<div class="form-group ">
+                  <label for="mana_mail" class="control-label">主管信箱</label>
+                  <input type="text" class="form-control" name="mana_mail" id="mana_mail" required>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-success" id="addmanaBT">新增</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- addmanagerModal end-->
+
+  <!-- editmanaModal -->
+    <div class="modal fade" id="editmanaModal" tabindex="-1" role="dialog" aria-labelledby="editmanaModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="editmanaModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <form id="editUserForm" role="form" data-toggle="validator">
+              <div class="form-group">
+                <label for="ed_manaid" class="control-label">主管編號</label>
+                <input type="text" class="form-control" name="ed_manaid" id="ed_manaid" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="ed_manager" class="control-label">主管名稱</label>
+                <input type="text" class="form-control" name="ed_manager" id="ed_manager" required>
+              </div>
+				<div class="form-group ">
+                  <label for="ed_manaextension" class="control-label">主管分機</label>
+                  <input type="text" class="form-control" name="ed_manaextension" id="ed_manaextension" required>
+                </div>
+				<div class="form-group ">
+                  <label for="ed_manamail" class="control-label">主管信箱</label>
+                  <input type="text" class="form-control" name="ed_manamail" id="ed_manamail" required>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-success" id="editmanaBT">儲存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- editmanaModal end-->
+  </div>
+  </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/jquery/jquery.dataTables.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="script/websiteInit.js"></script>
+<script src="script/dashboardContent.js"></script>
+<!-- <script src="script/dashboardIndex.js"></script> -->
+
+</html>

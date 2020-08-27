@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./style/main.css" rel="stylesheet">
+  <style>
+    body {
+      /*
+        background-image: url("https://via.placeholder.com/300x300/FFFFFF/DDDDDD?text=BOXO");
+        background-repeat: repeat;
+*/
+    }
+
+    #dashboard div.card .card-body-icon {
+      position: absolute;
+      z-index: 0;
+      top: 7px;
+      right: -24px;
+      font-size: 4rem;
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+
+    #dashboard-carousel-obj .carousel-inner>.item>img {
+      max-height: 350px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body id="websiteIndex-body">
+  <div class="frame-wrapper container container-fluid ">
+    <div id="content-panel" class="optOpen">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <blockquote id="welcomeTitle" class="marginBottom-0">
+            <p></p>
+          </blockquote>
+        </div>
+      </div>
+      <div id="content-wrapper" class="panel panel-default">
+        <div class="panel-body">
+          <h3>
+            <span class="label label-default">文章管理</span>
+          </h3>
+          <div class="row container-fluid marginTop-20 dashboard">
+            <div class="col-md-4 col-sm-6">
+              <div class="card div-shadow">
+                <div class="card-header">
+                  <h4 id="card-title">
+                    <span class="fa fa-caret-square-o-up" aria-hidden="true"></span>
+                    <small class="pull-right">
+                      <span class="label label-info">文章</span>
+                    </small>
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <h3 id="equtotcount">類別維護</h3>
+                </div>
+                <a class="card-footer clearfix" data-toggle='modal' data-target='#CategoryListModal' href="#">
+                  <span class="float-left">更多</span>
+                  <span class="float-right">
+                    <i class="fa fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card div-shadow">
+                <div class="card-header">
+                  <h4 id="card-title">
+                    <span class="fa fa-caret-square-o-down" aria-hidden="true"></span>
+                    <small class="pull-right">
+                      <span class="label label-info">文章</span>
+                    </small>
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <h3 id="equtotcount">領域維護</h3>
+                </div>
+                <a class="card-footer clearfix" data-toggle='modal' data-target='#fieldListModal' href="#">
+                  <span class="float-left">更多</span>
+                  <span class="float-right">
+                    <i class="fa fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- CategoryListModal -->
+      <div class="modal fade" id="CategoryListModal" tabindex="-1" role="dialog" aria-labelledby="CategoryModalLabel">
+        <div class="modal-dialog modal-md " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="CategoryModalLabel">類別管理</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12 assist_tool">
+                  <button class="btn btn-info" data-toggle='modal' data-target='#addCategoryModal'>
+                    <span class="fa fa-plus"></span>新增類別</button>
+                </div>
+              </div>
+              <hr>
+              <div class="row container-fluid" id="adminDashboard">
+                <div class="col-md-12">
+                  <div class="table-responsive">
+                    <table id="categoryListTable" class=" table table-striped table-bordered" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>類別編號</th>
+                          <th style="max-width: 250px;">類別名稱</th>
+                          <th>動作</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+
+              </form>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+  <!-- CategoryListModal end -->
+
+  <!-- addCategoryModal -->
+      <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="AddCateModalLabel">
+        <div class="modal-dialog modal-md " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="AddCateModalLabel">新增類別</h4>
+            </div>
+            <div class="modal-body">
+              <form id="addCateForm" role="form" data-toggle="validator">
+                <div class="form-group ">
+                  <label for="categoryname" class="control-label">類別名稱</label>
+                  <input type="text" class="form-control" name="categoryname" id="categoryname" required>
+                </div>
+                          
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-success" id="addCateBT">新增</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- addCategoryModal end-->
+  
+  <!-- editCateModal -->
+    <div class="modal fade" id="editCateModal" tabindex="-1" role="dialog" aria-labelledby="editCateModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="editCateModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <form id="editUserForm" role="form" data-toggle="validator">
+              <div class="form-group">
+                <label for="editcateid" class="control-label">類別編號</label>
+                <input type="text" class="form-control" name="editcateid" id="editcateid" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="editcategory" class="control-label">類別名稱</label>
+                <input type="text" class="form-control" name="editcategory" id="editcategory" required>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-success" id="editCateBT">儲存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- editCateModal end-->
+
+
+    <!-- fieldListModal -->
+      <div class="modal fade" id="fieldListModal" tabindex="-1" role="dialog" aria-labelledby="fieldModalLabel">
+        <div class="modal-dialog modal-md " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="fieldModalLabel">領域管理</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12 assist_tool">
+                  <button class="btn btn-info" data-toggle='modal' data-target='#addfieldModal'>
+                    <span class="fa fa-plus"></span>新增領域</button>
+                </div>
+              </div>
+              <hr>
+              <div class="row container-fluid" id="adminDashboard">
+                <div class="col-md-12">
+                  <div class="table-responsive">
+                    <table id="fieldListTable" class=" table table-striped table-bordered" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>領域編號</th>
+                          <th style="max-width: 250px;">領域名稱</th>
+                          <th>動作</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+
+              </form>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+  <!-- fieldListModal end -->
+
+  <!-- addfieldModal -->
+      <div class="modal fade" id="addfieldModal" tabindex="-1" role="dialog" aria-labelledby="addfielModalLabel">
+        <div class="modal-dialog modal-md " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="addfielModalLabel">新增領域</h4>
+            </div>
+            <div class="modal-body">
+              <form id="addfielForm" role="form" data-toggle="validator">
+                <div class="form-group ">
+                  <label for="fielid" class="control-label">領域編號</label>
+                  <input type="text" class="form-control" name="fielid" id="fielid" required>
+                </div>
+
+                <div class="form-group ">
+                  <label for="fieldname" class="control-label">領域名稱</label>
+                  <input type="text" class="form-control" name="fieldname" id="fieldname" required>
+                </div>    
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-success" id="addfielBT">新增</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- addfieldModal end-->
+
+   <!-- editfielModal -->
+    <div class="modal fade" id="editfielModal" tabindex="-1" role="dialog" aria-labelledby="editfielModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="editfielModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <form id="editUserForm" role="form" data-toggle="validator">
+              <div class="form-group">
+                <label for="editfielid" class="control-label">領域編號</label>
+                <input type="text" class="form-control" name="editfielid" id="editfielid" disabled>
+              </div>
+
+              <div class="form-group">
+                <label for="editfield" class="control-label">領域名稱</label>
+                <input type="text" class="form-control" name="editfield" id="editfield" required>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-success" id="editfielBT">儲存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- editfielModal end-->
+  </div>
+  </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/jquery/jquery.dataTables.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="script/websiteInit.js"></script>
+<script src="script/dashboardContent.js"></script>
+<!-- <script src="script/dashboardIndex.js"></script> -->
+
+</html>

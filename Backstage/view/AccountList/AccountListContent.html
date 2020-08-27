@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./style/main.css" rel="stylesheet">
+</head>
+
+<body id="websiteIndex-body">
+  <div class="frame-wrapper container container-fluid ">
+    <div id="content-panel" class="optOpen">
+      <div id="content-wrapper">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <blockquote class="marginBottom-0">
+              <h3>
+                <ol class="breadcrumb">
+                  <li class="active">人員維護</li>
+                  <li>
+                    <a href="AccountList?param1=F4A">帳號管理</a>
+                  </li>
+                </ol>
+              </h3>
+            </blockquote>
+          </div>
+        </div>
+        <div class="panel panel-default" id="AccountListContent">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12 assist_tool">
+                <button class="btn btn-info" data-toggle='modal' data-target='#addUsersModal'>
+                  <span class="fa fa-plus"></span>新增人員</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row container-fluid" id="adminDashboard">
+              <div class="col-md-12">
+                <div class="table-responsive">
+                  <table id="accountListTable" class=" table table-striped table-bordered" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>帳號</th>
+                        <th style="max-width: 250px;">姓名</th>
+                        <th>用戶狀態</th>
+                        <th>鎖定帳戶</th>
+                        <th>動作</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+            <!-- addUsersModal -->
+            <div class="modal fade" id="addUsersModal" tabindex="-1" role="dialog" aria-labelledby="UsersModalLabel">
+              <div class="modal-dialog modal-lg " role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="UsersModalLabel">新增人員</h4>
+                  </div>
+                  <div class="modal-body">
+
+
+                    <form id="addUserForm" role="form" data-toggle="validator">
+
+                      <div class="form-group col-lg-3">
+                        <label for="usernames" class="control-label">姓名</label>
+                        <input type="text" class="form-control" name="usernames" id="usernames" required>
+                      </div>
+                      <div class="form-group col-lg-3">
+                        <label for="usercode" class="control-label">使用者編號</label>
+                        <input type="text" class="form-control" name="usercode" id="usercode" required>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="s_name" class="control-label">主管姓名</label>
+                        <select class="form-control" name="s_name" id="s_name">
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="extension" class="control-label">分機</label>
+                        <input type="text" class="form-control" name="extension" id="extension" required>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="s_extension" class="control-label">主管分機</label>
+                        <select class="form-control" name="s_extension" id="s_extension">
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="usermail" class="control-label">信箱(登入帳號)</label>
+                        <input type="text" class="form-control" name="usermail" id="usermail" required>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="s_email" class="control-label">主管信箱</label>
+                        <select class="form-control" name="s_email" id="s_email">
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="userpsw" class="control-label">密碼</label>
+                        <div class="input-group">
+                          <input type="password" class="form-control" name="userpsw" id="userpsw">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="show_userpsw">
+                              <i class="fa fa-eye" aria-hidden="true"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="confirm_userpsw" class="control-label">確認密碼</label>
+                        <div class="input-group">
+                          <input type="password" class="form-control" name="confirm_userpsw" id="confirm_userpsw" data-match="#userpsw" data-match-error="與密碼不符">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="show_confirm_userpsw">
+                              <i class="fa fa-eye" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="d_id" class="control-label">部門</label>
+                        <select class="form-control" name="d_id" id="d_id">
+
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="rights" class="control-label">權限</label>
+                        <select class="form-control" name="rights" id="rights">
+                          <option value='3'>一般用戶</option>
+                          <option value='2'>超級使用者</option>
+                          <option value='1'>管理員</option>
+                        </select>
+                      </div>
+
+                      <!-- <div class="footer" align="right">
+                                <button type="reset" class="btn btn-warning" id="ResetBt">放棄</button>
+                                <button type="button" class="btn btn-success" id="addUserBT">新增</button>
+                              </div> -->
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success" id="addUserBT">新增</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- editUsersModal -->
+          <div class="modal fade" id="editUsersModal" tabindex="-1" role="dialog" aria-labelledby="UsersModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="editUsersModalLabel">修改人員</h4>
+                </div>
+                <div class="modal-body">
+
+                  <form id="editUserForm" role="form" data-toggle="validator">
+                    <div class="form-group col-lg-3">
+                      <label for="ed_usernames" class="control-label">姓名</label>
+                      <input type="text" class="form-control" name="ed_usernames" id="ed_usernames" required>
+                    </div>
+                    <div class="form-group col-lg-3">
+                      <label for="ed_usercode" class="control-label">使用者編號</label>
+                      <input type="text" class="form-control" name="ed_usercode" id="ed_usercode" required disabled>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_s_name" class="control-label">主管姓名</label>
+                      <select class="form-control" name="ed_s_name" id="ed_s_name">
+                      </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_extension" class="control-label">分機</label>
+                      <input type="text" class="form-control" name="ed_extension" id="ed_extension" required>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_s_extension" class="control-label">主管分機</label>
+                      <select class="form-control" name="ed_s_extension" id="ed_s_extension">
+                      </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_usermail" class="control-label">信箱(登入帳號)</label>
+                      <input type="text" class="form-control" name="ed_usermail" id="ed_usermail" required disabled>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_s_email" class="control-label">主管信箱</label>
+                      <select class="form-control" name="ed_s_email" id="ed_s_email">
+                      </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_userpsw" class="control-label">密碼</label>
+                      <div class="input-group">
+                        <input type="password" class="form-control" name="ed_userpsw" id="ed_userpsw">
+                        <span class="input-group-btn">
+                          <button class="btn btn-default" type="button" id="show_ed_userpsw">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_d_id" class="control-label">部門</label>
+                      <select class="form-control" name="ed_d_id" id="ed_d_id">
+
+                      </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <label for="ed_rights" class="control-label">權限</label>
+                      <select class="form-control" name="ed_rights" id="ed_rights">
+                        <option value='3'>一般用戶</option>
+                        <option value='2'>超級使用者</option>
+                        <option value='1'>管理員</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <br>
+                      <br>
+                    </div>
+                  </form>
+
+                  <!---<form id="editUserForm" role="form" data-toggle="validator">
+                                  <div class="form-group">
+                                    <label for="editusername" class="control-label">帳號(信箱)</label>
+                                    <input type="text" class="form-control" name="edituseremail" id="edituseremail" disabled>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="editusercode" class="control-label">USER_ID</label>
+                                    <input type="text" class="form-control" name="editusercode" id="editusercode" disabled>
+                                  </div>  
+                                  <div class="form-group">
+                                    <label for="editusername" class="control-label">姓名</label>
+                                    <input type="text" class="form-control" name="editusername" id="editusername" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="editusername" class="control-label">分機</label>
+                                      <input type="text" class="form-control" name="edituserextension" id="edituserextension" required>
+                                    </div>
+                                </form> -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-success" id="editUserBT">儲存</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/jquery/jquery.dataTables.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="script/websiteInit.js"></script>
+<script src="script/accountlistContent.js"></script>
+<!-- <script src="script/dashboardIndex.js"></script> -->
+
+</html>

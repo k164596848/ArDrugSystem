@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/teach.css">
+	<link rel="stylesheet" type="text/css" href="./style/loading.css">
+</head>
+<body>
+<div id="load">
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute">
+<span class="loadingtext">loading</span>
+<div class="object" id="object_one"></div>
+<div class="object" id="object_two"></div>
+<div class="object" id="object_three"></div>
+
+</div>
+</div>
+ 
+</div>
+
+</div>
+	<div style="background-image: url('./pic/background2.png');opacity:0;background-size: 100%;height: 100vh" class="all_show container-fuild" id="all">
+	<div class="container-fuild" >
+		<div class="col-md-12">
+			<div style="margin-left: auto;margin-right: auto;">
+				<img src="./pic/board.png" style="width: 80%;margin-left:10%;margin-top: 2%">
+			</div>
+			<div style="width: 60%;height: 50%;position: absolute;z-index: 99;top:15%;left:21%;text-align: center;">
+				<span style="font-size: 45px; color:white;font-weight: 600;font-family: Microsoft JhengHei" id="content">黑板的題目</span>
+			</div>
+			
+		</div>
+	<!-- 	<div style="width: 200px;height: 200px;position:absolute;bottom: 1%;left: 1%">
+			<img src="./pic/back_btn.png" style="max-width: 100%;margin-top: 25%;" id="back">
+		</div> -->
+		<div style="width:20%;height:20%;position:absolute;bottom: 1%;right: 1%">
+		<img src="./pic/pass_btn.png" style="max-width: 70%;margin-top:5%;" id="finish">
+		</div>
+		<!-- <button class="btn btn-info" style="font-size: 50px;position: absolute;z-index: 99;bottom:5%;right:2%;font-family: Microsoft JhengHei" id="finish">學習完畢</button> -->
+	</div>
+</div>
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="script/teach.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>

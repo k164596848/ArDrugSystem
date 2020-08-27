@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+	<link rel="stylesheet" type="text/css" href="./style/R_map1.css?ver=5">
+	<link rel="stylesheet" type="text/css" href="./style/animate1.css?ver=5">
+	<link rel="stylesheet" type="text/css" href="./style/loading.css">
+</head>
+
+<body style="width:95%">
+
+	<!-- <h1 id="load">loading...</h1> -->
+	<div id="load">
+		<div id="loading">
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<span class="loadingtext">loading</span>
+					<div class="object" id="object_one"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_three"></div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<div style="background-image: url('./pic/background2.png');height: 100vh;opacity:0;background-size: 100%;" id="bg" class="container-fuild">
+		<div class="container-fuild " id="all">
+			<img src='./pic/home_btn.png' onclick="window.location.href='./test?param1=F4B'" id="home_btn"></img>
+			<img src='./pic/map_btn4.png' id="map_btn"></img>
+			<div class="row" style="height: 32vh">
+				<!-- 第一層 症狀 -->
+				<div class="col-md-2" style="height: 32vh;width: 10%;float: left;"></div>
+				<div class="col-md-1" style="height: 32vh;width: 6%;float: left;"></div>
+				<div class="col-md-2" style="height: 32vh;width: 23%;position: relative;float: left;">
+
+				</div>
+				<div class="col-md-1" style="height: 32vh;width: 6%;position: relative;float: left;">
+
+					<div>
+						<img src="./pic/arrow.png" id="click_point1" class="click_pointL2">
+						<img src="./pic/diamond1.png" id="UP_1">
+
+					</div>
+				</div>
+				<div class="col-md-3" style="height: 32vh;width: 28%;float: left;">
+					<div id="UP_block1">
+						<img src="./pic/border.png" width="80%" id="border1_img">
+						<img src="./pic/green_complete.png" id="stamp1">
+						<div id="B1div">
+							<p id="B1text">大麻</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3" style="height: 32vh;width: 27%;float: left;">
+
+					<div id="UPdiv_1">
+						<img src="./pic/arrow.png" style="width: 100%">
+						<!-- <img src="./pic/diamond1.png" style="max-width: 100%;transform:rotate(0deg)"> -->
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div class="row" style="height: 36vh">
+				<!-- 第二層 影響-->
+				<div class="col-md-2" style="height: 36vh;width: 10%;float: left;">
+					<img src="./pic/diamond1.png" id="backbtn">
+
+				</div>
+				<div class="col-md-1" style="height: 36vh;width: 6%;float: left;">
+					<div style="width:100%;height:70px;margin: auto;position: absolute;left:-16px;right: 0;bottom:0;top:-17px;">
+					</div>
+				</div>
+				<div class="col-md-2" style="height: 36vh;width: 23%;float: left;">
+					<div id="Mapdiv">
+						<div style="margin-top: 35%;text-align:right;">
+							<div id="B0div">
+								<p id="B0text">大麻</p>
+							</div>
+							<img src="./pic/circle2.png" width="100%" id="map_img">
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-1" id="UPdiv_2-1">
+					<div style="width:100%;height:70px;margin: auto;position: absolute;left:-17px;right: 0;bottom:0;top:-45px;">
+						<img src="./pic/diamond1.png" id="UP_2">
+						<img src="./pic/arrow.png" id="click_point2" class="click_point3">
+					</div>
+				</div>
+				<div class="col-md-2" style="height: 36vh;width: 28%;float: left;">
+					<div id="UP_block2">
+						<img src="./pic/border.png" width="80%" id="border2_img">
+						<img src="./pic/green_complete.png" id="stamp2">
+						<div id="B2div">
+							<p id="B2text">大麻</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3" style="height: 36vh;width: 27%;float: left;">
+
+					<div id="UPdiv_2">
+						<!-- <img src="./pic/diamond1.png" style="max-width: 100%;transform:rotate(0deg)" > -->
+						<img src="./pic/arrow.png" id="UP_2-2">
+					</div>
+
+				</div>
+
+
+			</div>
+
+
+			<div class="row" style="height: 32vh">
+				<!-- 第二層 介紹 -->
+				<div class="col-md-2" style="height: 32vh;width: 10%;float: left;"></div>
+				<div class="col-md-1" style="height: 32vh;width: 6%;float: left;"></div>
+				<div class="col-md-2" style="height: 32vh;width: 23%;float: left;"></div>
+				<div class="col-md-1" style="height: 32vh;width: 6%;float: left;position: relative;">
+					<div style="width:100%;height:70px;margin: auto;position: absolute;left:0;right: 0;top:0;">
+						<img src="./pic/diamond1.png" id="UP_3">
+						<img src="./pic/arrow.png" id="click_point3" class="click_pointD2">
+					</div>
+				</div>
+				<div class="col-md-2" style="height: 32vh;width: 28%;float: left;">
+					<div id="UP_block3">
+						<img src="./pic/border.png" width="80%" id="border3_img">
+						<img src="./pic/green_complete.png" id="stamp3">
+						<div id="B3div">
+							<p id="B3text">大麻</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3" style="height: 32vh;width: 27%;float: left;">
+
+					<div id="UPdiv_3">
+						<img src="./pic/arrow.png" id="UP_3-1">
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+</body>
+
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="script/R_map1.js"></script>
+<script src="script/layerstop.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+
+</html>

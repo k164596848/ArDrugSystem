@@ -1,0 +1,119 @@
+#title
+{
+  /*margin-left: -5%;*/
+  max-width: 100%;
+  position: absolute;
+  bottom:0px;
+}
+
+.card
+{
+  animation: card 2s ;
+  animation-delay:1s;
+  animation-fill-mode:forwards;
+  /*animation-iteration-count:infinite;*/
+}
+
+.fade
+{
+  animation: fadeout 1s ;
+  animation-fill-mode:forwards;
+  /*animation-iteration-count:infinite;*/
+}
+.fadein
+{
+  animation: fadein 1s ;
+  animation-fill-mode:forwards;
+  /*animation-iteration-count:infinite;*/
+}
+.big
+{
+  animation: div 1s ;
+  animation-delay:3s;
+  animation-fill-mode:forwards;
+}
+
+.show
+{
+  animation: show 1.5s ;
+  /*animation-delay:s;*/
+  animation-fill-mode:forwards;
+}
+
+.fadeout
+{
+  animation: fadeout 1s ;
+  /*animation-delay:s;*/
+  animation-fill-mode:forwards;
+}
+.disapear
+{
+  display: none;
+}
+.cardpic
+{
+  width:15%;
+  height: 20%;
+  margin-top: 5%;
+  height: 300px;
+  float: left;
+  position: absolute;
+  right:5%;
+  border-radius: 20px;
+  border:2px solid #483c3c;
+  background: #f2f2f2;
+  /*border-bottom: 20px solid #000;*/
+}
+@keyframes card{  /*紅色point指標*/
+        0%{
+              
+           left:61%;
+          }
+        100%
+          {
+            left:7%;
+          }
+  }
+@keyframes div{  /*紅色point指標*/
+        0%{
+              
+          width: 15%;
+          height: 0%;
+          }
+        100%
+          {
+          width: 90%;
+          height: 90vh;
+          }
+  }
+
+@keyframes show{  /*紅色point指標*/
+        0%{
+              
+          opacity:0;
+          }
+        100%
+          {
+         opacity: 1;
+          }
+  }
+@keyframes fadeout{  /*紅色point指標*/
+        0%{
+              
+          opacity:1;
+          }
+        100%
+          {
+         opacity: 0;
+          }
+  }
+@keyframes fadein{  /*紅色point指標*/
+        0%{
+              
+          opacity:0;
+          }
+        100%
+          {
+         opacity: 1;
+          }
+  }

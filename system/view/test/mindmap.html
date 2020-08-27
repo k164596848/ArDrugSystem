@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/mindmap.css">
+
+	<script src="plugin/jquery/screenfull.js"></script>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+</head>
+
+<body style="width: 95%;margin-left: 2%">
+	<div style="background-image: url('./pic/background2.png');height: 100vh;opacity:0;background-size: 100%;" class="all_show container-fuild"
+	 id="Bg">
+		<img src='./pic/backindex.png' style="position: absolute;z-index: 99;right:1%;top:1%;width:5%" onclick="window.location.href='./login?param1=F4B'"
+		 id="home_btn"></img>
+		<div class="container-fuild" id="all">
+
+			<div class="row" style="height:4.5vh;position: relative" id="topspace">
+				<!-- 方塊 -->
+				<div style="width: 80px;height:80px;margin: auto;position: absolute;left:0;right: 0;top:0;bottom:0;">
+				</div>
+
+			</div>
+			<div class="row" style="height:17.5vh;position: relative">
+				<!-- 選單1 -->
+				<img src="./pic/border3.png" id="A_img">
+				<img src="./pic/complete.png" style="width:15%;position: absolute;top:-12%;left:35%;opacity:0" id="A_stamp">
+				<div id="Adiv">
+					<p id="Atext">大麻</p>
+				</div>
+			</div>
+			<div class="row" style="height:22.5vh;position: relative">
+				<!-- 方塊 -->
+				<div id="A_arrow_div">
+					<img src="./pic/diamond1.png" id="A_arrow">
+				</div>
+			</div>
+			<div class="row" style="height:25vh;position: relative;margin-top: -1%">
+				<!-- MAP中心 -->
+				<div class="col-md-1" style="height:25vh;width: 6%;position: relative">
+					<!-- 方塊 -->
+					<div style="width: 80px;height:80px;margin: auto;position: absolute;left:0;right: 0;top:0;bottom:0;">
+					</div>
+				</div>
+				<div class="col-md-2" style="height:25vh;width: 25%;position: relative">
+					<img src="./pic/border3.png" height="70%" id="E_img">
+					<img src="./pic/complete.png" style="width:60%;position: absolute;top:-25%;left:48%;opacity:0" id="E_stamp">
+					<div id="Ediv">
+						<p id="Etext">大麻</p>
+					</div>
+				</div>
+				<!-- 選單1 -->
+				<div class="col-md-1" style="height:25vh; width:6%;">
+					<!-- 方塊 -->
+					<div id="E_arrow_div">
+						<img src="./pic/diamond1.png" id="E_arrow">
+					</div>
+				</div>
+				<div class="col-md-4" style="height:25vh;width: 25%;position: relative;margin-left: 1%">
+					<!-- MAP -->
+					<div style="width: 25vw;height: 25vw;margin: auto;position: absolute;left:0;right: 0;top:-29%;bottom:0;border-radius: 50%;text-align:center;">
+						<div id="mapdiv">
+							<img src="./pic/circle_mainmap.png" id="map_img">
+							<img src="./pic/head2.png" id="head_img">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1" style="height:25vh;width: 6%;position: relative">
+					<!-- 方塊 -->
+					<div id="B_arrow_div">
+						<img src="./pic/diamond1.png" id="B_arrow">
+					</div>
+				</div>
+				<div class="col-md-2" style="height:25vh;width: 25%;">
+					<img src="./pic/border2.png" id="B_img">
+					<img src="./pic/complete.png" style="width:60%;position: absolute;top:-25%;left:41%;opacity:0" id="B_stamp">
+					<div id="Bdiv">
+						<p id="Btext">大麻</p>
+					</div>
+				</div>
+				<!-- 選單1 -->
+				<div class="col-md-1" style="height:25vh;width: 6%;position: relative">
+					<!-- 方塊 -->
+					<div style="width: 80px;height:80px;margin: auto;position: absolute;left:0;right: 0;top:0;bottom:0;">
+					</div>
+				</div>
+			</div>
+			<div class="row" style="height:7.5vh;position: relative">
+				<div id="D_arrow_div">
+					<img src="./pic/diamond1.png" id="D_arrow">
+				</div>
+				<div id="C_arrow_div">
+					<img src="./pic/diamond1.png" id="C_arrow">
+				</div>
+			</div>
+			<div class="row" style="height:17.5vh;position: relative">
+				<div>
+					<img src="./pic/border3.png" id="D_img">
+					<img src="./pic/complete.png" style="width:15%;position: absolute;top:6%;left:25%;opacity:0" id="D_stamp">
+					<div id="Ddiv">
+						<p id="Dtext">大麻</p>
+					</div>
+				</div>
+				<img src="./pic/complete.png" style="width:15%;position: absolute;top:6%;right:14%;z-index:99;opacity:0" id="C_stamp">
+				<img src="./pic/border2.png" id="C_img">
+				<div id="Cdiv">
+					<p id="Ctext">大麻</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="script/mindmap.js"></script>
+<script src="script/map.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,285 @@
+/*header.html*/
+img.width300 {
+    width: 100%;
+}
+
+/*���܌��[��*/
+#func-panel {
+    background-color: #66CCCC;
+    color: #FFFFFF;
+}
+
+    #func-panel .panel-body {
+        padding: 5px 15px;
+    }
+
+    #func-panel .nav-pills {
+        font-size: 1.5em;
+    }
+
+        #func-panel .nav-pills a {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+            #func-panel .nav-pills a:hover, #func-panel .nav-pills .dropdown-menu {
+                background-color: #0066CC;
+                color: #fff;
+            }
+
+                #func-panel .nav-pills .dropdown-menu a:hover {
+                    color: #fff;
+                    background-color: #0079F2;
+                }
+/*��������*/
+#content-panel {
+/*    background-color: #FFFFFE;*/
+    margin-top: 60px;
+    margin-left: 200px;
+}
+
+#content-panel-top .hot-search-label {
+    color: #ddd;
+}
+
+#content-panel-top .label-default {
+    font-size: 1em;
+}
+
+#content-hot-item-panel > * {
+    font-size: 1em;
+}
+
+#content-hot-item-panel .panel-footer {
+    background-color: #fff;
+}
+/*?������ʽ*/
+#content-carousel .carousel-caption {
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    text-shadow: none;
+}
+
+#content-carousel .list-group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 200px;
+}
+
+#content-carousel .list-group-item {
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+    #content-carousel .list-group-item:hover {
+        border-right: 5px solid #FF4D00;
+    }
+
+#content-carousel .list-group .active {
+    background-color: #eee;
+}
+
+@media (min-width: 992px) {
+    /*#myCarousel {padding-right:33.3333%;}*/
+    #content-carousel .carousel-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .carousel-caption p,
+    #content-carousel .list-group {
+        display: none;
+    }
+}
+
+/*item��ʽ*/
+#content-item-panel .item-brand, #content-hot-item-panel .item-brand {
+    color: #FFFFFF;
+    background-color: #333333;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#content-item-panel .item-title, #content-hot-item-panel .item-title {
+    color: #404040;
+}
+
+#content-item-panel .item-description {
+    color: #1478EA;
+}
+
+#content-item-panel .item-price, #content-hot-item-panel .item-price {
+    color: #CC0000;
+    font-size: 2em;
+}
+
+/*��?��backTop===start*/
+#back-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #1e1e1e;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 100;
+    display: none;
+}
+
+    #back-top:hover {
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+/*?��?*/
+#cart {
+    position: fixed;
+    bottom: 65px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #1e1e1e;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.badge {
+    background-color: #b80c0c;
+}
+
+#cart:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#cart .badge {
+    position: absolute;
+}
+/*item???*/
+#content-item-detail-panel {
+    padding: 10px;
+}
+
+    #content-item-detail-panel .panel-body {
+        /*border:2px solid #FF4D00;*/
+    }
+
+    #content-item-detail-panel .item-title {
+        color: #444444;
+    }
+
+    /*Dashboard*/
+    #dashboard{
+        color: #666;
+    }
+
+#dashboard  a,#byclass a ,#dashboardlist a, .dashboard  a{
+    color: #777;
+}
+#dashboard div.card,#dashboardlist div.card, .dashboard div.card{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    height: 150px;
+    word-wrap: break-word;
+    background-color: #fff;
+    color: #777;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    overflow: hidden;
+    margin: 10px 0px 15px 0px;
+}
+#dashboardlist div.card {
+    height: 250px !important;
+}
+#dashboard .card-header,.dashboard .card-header {
+    border-bottom: 1px solid #ddd;
+}
+#dashboard h4#card-title,.dashboard h4#card-title {
+    padding: 0 10px;
+}
+#dashboard div.card .card-body,#dashboardlist  div.card .card-body,.dashboard div.card .card-body{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0 15px;
+}
+#dashboard div.card .card-body-icon,#dashboardlist  div.card .card-body-icon,.dashboard div.card .card-body-icon {
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: -44px;
+    font-size: 4rem;
+    -webkit-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    transform: rotate(25deg);
+}
+#dashboardlist  div.card .card-body-icon{
+        top: 53px;
+        right: -55px;
+}
+.action_content, .task_content {
+    overflow : hidden;
+      text-overflow : ellipsis;
+      white-space : nowrap;
+      width : 250px;
+}
+.task_content{
+    height: 65px;
+}
+#dashboard div.card .card-footer ,#dashboardlist  div.card .card-footer,.dashboard div.card .card-footer{
+    padding: .75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+#dashboard div.card .card-footer .float-left,#dashboardlist  div.card .card-footer .float-left,.dashboard div.card .card-footer .float-left{
+    float: left!important;
+}
+#dashboard div.card .card-footer .float-right,#dashboardlist   div.card .card-footer  .float-right,.dashboard div.card .card-footer .float-right{
+    float: right!important;
+}
+/*By Class*/
+.euq-icon {
+    max-width: 60px;
+}
+
+/*Dashboardlist table*/
+#dashboardlisttb > tr > td > img {
+	max-width:50px;
+}
+/*ByClasslist table*/
+#byclasslisttb > tr > td > img {
+	max-width:50px;
+}
+/*Borrowlist table*/
+#borrowlisttb > tr > td > img {
+    max-width:50px;
+}
+#borrowlisttb > tr:hover{
+    cursor: pointer;
+}
+

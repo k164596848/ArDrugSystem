@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+	<link rel="stylesheet" type="text/css" href="./style/animate1.css?ver=4">
+	<link rel="stylesheet" type="text/css" href="./style/loading.css">
+</head>
+<body style="width: 95%;height: 95%;margin-left:2%;margin-left: 2%">
+	<!-- <h1 id="load">loading...</h1> -->
+<div id="load">
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute">
+<span class="loadingtext">loading</span>
+<div class="object" id="object_one"></div>
+<div class="object" id="object_two"></div>
+<div class="object" id="object_three"></div>
+
+</div>
+</div>
+ 
+</div>
+
+</div>
+	<div style="background-image: url('./pic/background2.png');height: 100vh;opacity:0;background-size: 100%;" id="bg" class="container-fuild">	
+	<div class="container-fuild" id="all">
+	<img src='./pic/home_btn.png' style="position: absolute;z-index: 99;right:1%;bottom:1%;width:5%"  onclick="window.location.href='./test?param1=F4B'" id="home_btn"></img>
+	<img src='./pic/map_btn4.png' style="position: absolute;z-index: 99;right:7%;bottom:1%;width:5%" id="map_btn"></img>
+
+		<div class="row" style="height:5vh;position: relative;">
+			<div class="col-md-4" style="height:5vh">
+				<div style="width:30%;height:70px;margin: auto;position: absolute;left:16%;top:65%;" id="UPdiv_1">
+					<img src="./pic/arrow.png" style="max-width:100%;transform:rotate(-90deg)">
+				</div>
+			</div>
+			<div class="col-md-4" style="height:5vh">
+				<div style="width:30%;height:70px;margin: auto;position: absolute;left:44%;top:65%;" id="UPdiv_2">
+					<img src="./pic/arrow.png" style="max-width: 100%;transform:rotate(-90deg)">
+				</div>
+			</div>
+			<div class="col-md-4" style=";height:5vh">
+				<div style="width:30%;height:70px;margin: auto;position: absolute;left:44%;top:65%;" id="UPdiv_3">
+					<img src="./pic/arrow.png" style="max-width:100%;transform:rotate(-90deg)">
+				</div>
+			</div>
+		</div>
+	<div class="row" style="height:25vh;position: relative;">
+		<div class="col-md-4" style="height:25vh"  id="block1">
+			<img src="./pic/border.png" width="70%" style="position: absolute;top:30%;left:25%;z-index:-1;" id="border1_img">
+			<img src="./pic/green_complete.png" style="max-width: 55%;position: absolute;top:5%;left:5%;transform:rotate(-5deg);" id="stamp1">
+			<div style="margin-top: 27%;text-align:center;width:70%;margin-left: 25%">
+			<span style="font-size:45px;font-weight: 600;color:white;margin-top: 20%;z-index:99;" id="B1text">1-1-1</span>
+			</div>
+		</div>
+		<div class="col-md-4" style="height:25vh" id="block2">
+			<img src="./pic/border.png" width="70%" style="position: absolute;top:15%;left:16%;z-index:-1;" id="border2_img" >
+			<img src="./pic/green_complete.png" style="max-width: 55%;position: absolute;top:-15%;left:5%;transform:rotate(-5deg);" id="stamp2">
+			<div style="margin-top: 20%;text-align:center;width:70%;margin-left: 16%">
+			<span style="font-size:45px;font-weight: 600;color:white;margin-top: 20%;z-index:99;" id="B2text">1-1-1</span>
+			</div>
+		</div>
+		<div class="col-md-4" style="height:25vh" id="block3">
+			<img src="./pic/border.png" width="70%" style="position: absolute;top:30%;left:5%;z-index:-1;" id="border3_img">
+			<img src="./pic/green_complete.png" style="max-width: 55%;position: absolute;top:5%;left:5%;transform:rotate(-5deg);" id="stamp3">
+			<div style="margin-top: 27%;text-align:center;width:70%;margin-left:5%">
+			<span style="font-size:45px;font-weight: 600;color:white;margin-top: 20%;z-index:99" id="B3text">1-1-1</span>
+			</div>
+		</div>
+		</div>
+	<div class="row" style="height:8vh;position: relative;">
+		<div class="col-md-4" style="height:8vh"></div>
+		<div class="col-md-4" style="height:8vh;">
+			<div style="width:10vh;height:10vh;margin: auto;position: absolute;left:-85%;top:100%;bottom:0px;right: 0">
+				<img src="./pic/diamond1.png" style="max-width: 100%;transform:rotate(-135deg)" id="UP_1">
+				<img src="./pic/arrow.png" id="click_point1" class="click_pointD2" style="width: 100%;position: absolute;top:15%;left:-15%;transform:rotate(-135deg)">
+			</div>
+			<div style="width:10vh;height:10vh;margin: auto;position: absolute;left:3%;top:25px;bottom:0px;right: 0">
+				<img src="./pic/diamond1.png" style="max-width: 100%;transform:rotate(-90deg)" id="UP_2">
+				<img src="./pic/arrow.png" id="click_point2" class="click_pointU1" style="width: 100%;position: absolute;top:0%;left:0%;transform:rotate(-90deg)">
+			</div>
+			<div style="width:10vh;height:10vh;margin: auto;position: absolute;left:83%;top:100%;bottom:0px;right: 0">
+				<img src="./pic/diamond1.png" style="max-width: 100%;transform:rotate(-45deg);" id="UP_3">
+				<img src="./pic/arrow.png" id="click_point3" class="click_pointL2" style="width: 100%;position: absolute;top:30%;left:30%;transform:rotate(-45deg)">
+			</div>
+		</div>
+		<div class="col-md-4" style="height:8vh"></div>
+	</div>
+		<div class="row" style="height:30vh;position: relative;">
+			<img src="./pic/circle2.png" style="position: absolute;left:39%;max-height: 100%;z-index:-1;">
+			<div style="margin-top: 8%;text-align:center;margin-left: 3%">
+					<p style="font-size:50px;font-weight: 600;color:white;z-index:99;margin-left:-1.8%" id="Maptext">1-1</p>
+			</div>
+		</div>
+		<div class="row" style="height:10vh;position: relative;">
+		<img src="./pic/diamond1.png" style="max-height: 150%;position: absolute;left:45.5%;transform:rotate(90deg)" id="backbtn">
+		</div>
+		<div class="row" style="height:8vh;position: relative;">
+			<div style="width:8vh;height:8vh;margin: auto;position: absolute;left:0;top:0px;bottom:0px;right: 0">
+				
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<!-- <script src="script/mindmap.js"></script> -->
+<script src="script/layerstop.js"></script>
+<script src="script/U_map1.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>

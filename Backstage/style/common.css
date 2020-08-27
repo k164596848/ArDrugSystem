@@ -1,0 +1,81 @@
+/*@import url(//fonts.googleapis.com/earlyaccess/cwtexhei.css);*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f0f3f4;
+}
+#memberIndex-body {
+    background-color: rgb(241,241,241);
+    max-width: 100%;
+}
+#content-wrapper {
+    padding: 10px;
+}
+* {
+    font-family: 'Microsoft JhengHei', sans-serif;
+}
+small{
+    color: red;
+}
+.bg-dark{
+    background-color: #343A40;
+}
+.bg-blue {
+    background-color: #177BBB;
+}
+.bg-dark h1 {
+    color: #FFF;
+}
+.bg-login {
+    background-image: url(../pic/login2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.p_comingSoon {
+    font-size: 10em;
+    text-shadow: 5px 5px #ddd;
+}
+img.width70 {
+    width: 70%;
+}
+
+img.width100 {
+    width: 100%;
+}
+
+img.height300{
+    height:300px;
+}
+
+.marginTop-20 {
+    margin-top: 20px;
+}
+
+.marginBottom-0 {
+    margin-bottom: 0px;
+}
+
+.common_bgcolor_color {
+    background-color: #ED5D52 !important;
+    color: #fff !important;
+    /*border-right: 5px solid #333 !important;*/
+}
+
+.container {
+    /*padding: 0;*/
+}
+
+/* link2 table */
+.table-sytle{
+    padding:0px 10px;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #dddddd;
+    border-color: #dddddd;
+    color: #333;
+}
+
+

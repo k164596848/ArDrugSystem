@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <title>登入測試</title>
+</head>
+<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/login.css">
+
+<body>
+
+  <div id="wrap" class="container-fuild">
+    <div style="width: 100%;height: 250px;margin-top: -60px;overflow: hidden;">
+    </div>
+    <div style=" padding-left: 30%;" class="container marginTop-20">
+      <div class="row">
+        <div class="col-md-7 text-center ">
+          <div class="panel panel-primary login-panel" style="box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);">
+            <div class="panel-heading text-center">
+              <h4>
+                <strong>「AR」you 反毒 系統登入</strong>
+              </h4>
+            </div>
+            <div class="panel-body">
+              <form id="loginForm"  >
+                <fieldset class="text-left">
+                  <div class="form-group">
+                    <input type="text" name="user_id" id="user_id" class="input-username" placeholder="帳號">
+                    <input type="password" name="user_pw" id="user_pw" class="input-password" placeholder="密碼">
+                  </div>
+                </fieldset>
+                <fieldset class="text-center form-footer">
+                  <button id="loginbtn" type="button" class="btn btn-primary text-center col-sm-8">登入</button>
+                  <button id="ResetBt" type="reset" class="btn btn-default text-center col-sm-3" onclick="javascript:location.href='./login?param1=F4D'">取消</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="plugin/jquery/jquery.qrcode.min.js"></script>
+<script src="script/login.js"></script>
+
+</html>

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<link href="./style/main.css" rel="stylesheet">
+</head>
+<body id="websiteIndex-body">   
+    <div class="frame-wrapper container container-fluid ">    
+        <div id="content-panel" class="optOpen">
+            <div id="content-wrapper">
+               <div class="panel panel-default">
+                    <div class="panel-body">
+                       <blockquote class="marginBottom-0">
+                          <h3>
+                                <ol class="breadcrumb">                     
+                                  <li class="active"><a href ="mind_map?param1=catelog1">角色管理</a></li>
+                                </ol>                  
+                          </h3>
+                        </blockquote>
+                    </div>
+                </div>
+               <div class="panel panel-default" id="ProductImageList">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-xs-2 assist_tool">
+                             <button class="btn btn-info" data-toggle='modal' data-target='#addpClassModal' ><span class="fa fa-plus"></span>新增角色內容</button>
+                        </div>     
+                      </div>
+                      <hr>
+                       <div class="row container-fluid" id="adminPImag">
+                          <div class="col-md-12">
+                            <div class="table-responsive">
+							<form id="submit_product_sort" class="form-horizontal" role="form" data-toggle="validator"  enctype="multipart/form-data">
+                              <table id="pClassTable" class=" table table-striped table-bordered align-items-center" style="width:100%">
+                                  <thead>
+                                      <tr>  
+										<th><center>代號</center></th>
+                                        <th><center>角色圖片</center></th>
+                                        <th><center>角色名稱</center></th>
+                                        <th></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody style="text-align: center;margin-top: auto;margin-bottom: auto;"></tbody>
+                              </table>
+							  </form>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- addpClassModal -->
+						<div class="modal fade" id="addpClassModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="ModalLabel">新增角色內容</h4>
+                              </div>
+                              <div class="modal-body">
+							  <form id="addpClassForm" class="form-horizontal" role="form" data-toggle="validator"  enctype="multipart/form-data">
+                                
+								  <div class="form-group">
+                                        <label for="role_name" class="col-xs-4 control-label">角色名稱</label>
+                                        <div class="col-xs-8">
+                                           <input type="text" class="form-control" id="role_name" name="role_name" >
+                                        </div>                                    
+                                  </div>
+								  <div class="form-group">
+                                        <label for="role_code" class="col-xs-4 control-label">角色代碼</label>
+                                        <div class="col-xs-8">
+                                           <input type="text" class="form-control" id="role_code" name="role_code" >
+                                        </div>                                    
+                                  </div>
+                                  <div class="form-group">
+                                        <label for="bannerimginput" class="col-xs-4 control-label" id= "imgupload">角色圖片上傳</label>
+                                        <div class="col-xs-8">
+											<span style="color: red;font-weight: bold;">限制圖片最小為500X300 圖片比例為5:3 檔案大小<=2M</span>
+											<br>
+                                            <input type="file" class="form-control" name="role_img" id="role_img" accept="image/jpeg,image/gif,image/png" onchange="previewEvent($(this));" required>
+											<br>
+                                            <img id="preview_a_source" src="https://via.placeholder.com/280x160/FFFFFF/000000?text=預覽圖片" class="img-thumbnail" style="max-width: 280px;max-height: 160px;">
+                                        </div>                                        
+                                    </div>
+                                  
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-success" id="addpclassBT" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Data Insert...">新增</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    <!-- editoemCodeModal -->
+                        <div class="modal fade" id="editclassModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="editModalLabel">編輯分支內容</h4>
+                              </div>
+                              <div class="modal-body">
+                                <form id="editClassForm" class="form-horizontal" role="form" data-toggle="validator"  enctype="multipart/form-data">
+                                
+								  <div class="form-group">
+                                        <label for="ed_role_name" class="col-xs-4 control-label">角色名稱</label>
+                                        <div class="col-xs-8">
+                                           <input type="text" class="form-control" id="ed_role_name" name="ed_role_name" >
+                                        </div>                                    
+                                  </div>
+								  <div class="form-group">
+                                        <label for="ed_role_code" class="col-xs-4 control-label">角色代碼</label>
+                                        <div class="col-xs-8">
+                                           <input type="text" class="form-control" id="ed_role_code" name="ed_role_code" >
+                                        </div>                                    
+                                  </div>
+                                  <div class="form-group">
+                                        <label for="bannerimginput" class="col-xs-4 control-label" id= "imgupload">角色圖片上傳</label>
+                                        <div class="col-xs-8">
+											<span style="color: red;font-weight: bold;">限制圖片最小為500X300 圖片比例為5:3 檔案大小<=2M</span>
+											<br>
+                                            <input type="file" class="form-control" name="ed_role_img" id="ed_role_img" accept="image/jpeg,image/gif,image/png" onchange="previewEvent($(this));" required>
+											<br>
+                                            <img id="ed_preview_a_source" src="https://via.placeholder.com/280x160/FFFFFF/000000?text=預覽圖片" class="img-thumbnail" style="max-width: 280px;max-height: 160px;">
+                                        </div>                                        
+                                    </div>
+                                  <input type='hidden' id='role_ser' name='role_ser' value='#'>
+                                </form>
+                                  
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-success" id="editclassBT" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Data Loading...">儲存</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+						
+                </div>                               
+            </div>
+        </div>
+    </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<script src="plugin/jquery/jquery.dataTables.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="script/websiteInit.js"></script>
+ <script src="script/rpg_role.js"></script>
+<!--<script src="script/dashboardIndex.js"></script> -->
+</html>

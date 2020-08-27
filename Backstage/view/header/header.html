@@ -1,0 +1,91 @@
+<header>
+    <div id="container-header"  class="optOpen">
+        <div>
+            <button id="optButton" type="button" class="btn btn-lg" aria-label="Left Align" style="float: left;margin-top: 3px;">
+              <span class="fa fa-bars" aria-hidden="true"></span>
+            </button>
+        </div>        
+         <div class="dropdown pull-right" id="headerToolBar" style="color: #FFF;">
+           <span id="username"></span>
+           <!--  -->
+           <span id="userid"></span>
+           <!-- <span id="userdepartment"></span>           -->
+           <span id="userrights"></span>
+<!--
+            <button class="btn" type="button">
+                <span class="fa fa-bell"></span>
+            </button>
+-->
+<!--
+          <button class="btn dropdown-toggle" type="button" id="user-menu-tool" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="fa fa-power-off"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="user-menu-tool">
+            <li><a href="Auth" class="logoutBT"  onclick="logoutEvent();"><span class="fa fa-sign-out " aria-hidden="true"></span >登出</a></li>
+          </ul>
+-->
+        </div> 
+    </div>
+    <div id="container-opt" class="optOpen">
+        <div id="container-opt-panel">
+            <h3 id="HeaderLogo">AR Drug System</h3>
+            <div class="sideDateTime text-center">
+                <p class="showTime"></p>
+                <p class="showDate"></p>
+            </div>
+            <ul>
+                <!-- <li class="titleFunction">                    
+                    <a href="./Dashboard?param1=F3D"><span class="fa fa-2x fa-tachometer" aria-hidden="true"></span>儀表板</a>
+                </li>
+                <li class="titleFunction">                   
+                        <a href="#"><span class="fa fa-money" aria-hidden="true"></span >借用/歸還</a>
+                </li> -->
+                <!-- <li class="titleFunction">            
+                    <a href="./Announcement?param1=B4A"><span class="fa fa-2x fa-bullhorn " aria-hidden="true"></span >佈告欄</a>
+                </li> 
+                <li class="titleFunction dropdown">                   
+                    <a href="#"><span class="fa fa-2x fa-pencil-square-o " aria-hidden="true"></span >發文維護<span class="fa fa-chevron-down pull-right" aria-hidden="true"></span></a>
+                    <ul>                             
+                        <li><a href="./Newsadd?param1=F3C" class="hvr-underline-from-center"><span>我的文章</span></a></li>
+                        <li><a href="./Articleview?param1=C4A" class="hvr-underline-from-center"><span>觀看人員</span></a></li> 
+                         <li><a href="./Group?param1=F3C" class="hvr-underline-from-center"><span>我的群組</span></a></li>
+                    </ul>
+                </li> -->
+                
+				<li class="titleFunction dropdown">  <!--//1001賴-->
+                        <a href="#"><span class="fa fa-map fa-2x" aria-hidden="true"></span >概念構圖<span class="fa fa-chevron-down pull-right" aria-hidden="true"></span></a>
+                        <ul id = "">
+                            <li><a href="./mind_map?param1=branch1" class="hvr-underline-from-center"><span>概念圖管理</span></a></li>                       
+                           <li><a href="./Branchtest?param1=branchtest" class="hvr-underline-from-center"><span>分支測驗管理</span></a></li>  
+                        
+                        </ul>
+                </li>
+                <li class="titleFunction">            
+                    <a href="./ARface?param1=AF1"><span class="fa fa-2x fa-meh-o " aria-hidden="true"></span >AR臉部模擬</a>
+                </li>
+
+				<li class="titleFunction dropdown">  <!--//1110賴-->
+                        <a href="#"><span class="fa fa-gamepad fa-2x" aria-hidden="true"></span >情境模擬<span class="fa fa-chevron-down pull-right" aria-hidden="true"></span></a>
+                        <ul id = "">
+							<li><a href="./rpg?param1=quest" class="hvr-underline-from-center"><span>情境管理</span></a></li>  
+                            <li><a href="./rpg?param1=role" class="hvr-underline-from-center"><span>角色管理</span></a></li>                       
+                            <li><a href="./rpg?param1=background" class="hvr-underline-from-center"><span>場景管理</span></a></li>  
+                        </ul>
+                </li>
+				
+                <li class="titleFunction dropdown"> 
+                        <a href="#"><span class="fa fa-2x fa-cog" aria-hidden="true"></span >系統維護<span class="fa fa-chevron-down pull-right" aria-hidden="true"></span></a>
+                        <ul id = "right_sort">                       
+                           <li><a href="./Userdefend?param1=F3C" class="hvr-underline-from-center"><span>使用者維護</span></a></li>  
+                        
+                        </ul>
+                </li>     
+                <li class="titleFunction">                   
+                        <a href="#" id="logoutBT" onclick="logoutEvent();"><span class="fa fa-2x fa-sign-out " aria-hidden="true"></span >登出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</header>
+<script src="script/header.js"></script>

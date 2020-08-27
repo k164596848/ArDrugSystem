@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<link href="./style/main.css" rel="stylesheet">
+</head>
+<body id="websiteIndex-body">   
+    <div class="frame-wrapper container container-fluid ">    
+        <div id="content-panel" class="optOpen">
+            <div id="content-wrapper">
+               <div class="panel panel-default">
+                    <div class="panel-body">
+                       <blockquote class="marginBottom-0">
+                          <h3>
+                                <ol class="breadcrumb">                     
+                                  <li class="active"><a href ="mind_map?param1=catelog1">情境管理</a></li>
+                                </ol>                  
+                          </h3>
+                        </blockquote>
+                    </div>
+                </div>
+               <div class="panel panel-default" id="ProductImageList">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-xs-2 assist_tool">
+                             <button class="btn btn-info" data-toggle='modal' data-target='#addpClassModal' ><span class="fa fa-plus"></span>新增情境內容</button>
+                        </div>     
+                      </div>
+                      <hr>
+                       <div class="row container-fluid" id="adminPImag">
+                          <div class="col-md-12">
+                            <div class="table-responsive">
+							<form id="submit_product_sort" class="form-horizontal" role="form" data-toggle="validator"  enctype="multipart/form-data">
+                              <table id="pClassTable" class=" table table-striped table-bordered align-items-center" style="width:100%">
+                                  <thead>
+                                      <tr>  
+										<th><center>題序</center></th>
+										<th><center>隸屬題組</center></th>
+                                        <th><center>題目內容</center></th>
+                                        <th></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody style="text-align: center;margin-top: auto;margin-bottom: auto;"></tbody>
+                              </table>
+							  </form>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- addpClassModal -->
+						<div class="modal fade" id="addpClassModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+                          <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="ModalLabel">新增情境內容</h4>
+                              </div>
+                              <div class="modal-body">
+							  <form id="addpClassForm"  role="form" data-toggle="validator">
+								<h4 style='margin-left:20px;'>選擇題組</h4>
+                                <div class="form-group" style='margin-left:10px;' >
+									<div class="col-md-2">
+									<input type='radio' id='group' name='group' value='0'>性向測驗
+									</div>
+									<div class="col-md-2">
+									<input type='radio' id='group' name='group' value='1'>題組一
+									</div>
+									<div class="col-md-2">
+									<input type='radio' id='group' name='group' value='2'>題組二
+									</div>
+									<div class="col-md-2">
+									<input type='radio' id='group' name='group' value='3'>題組三
+									</div>
+									<div class="col-md-2">
+									<input type='radio' id='group' name='group' value='4'>結局
+									</div>
+									
+
+								</div>
+								<div class="form-group" style='margin-left:0px;' >
+								<div class="col-md-12">
+								<h4>設定題序</h4>
+								</div>
+								</div>
+								<div class="form-group" id="quest_qnum" style='margin-left:20px;'>
+								<input type="text" class="form-control" id="rpg_qnum" name='rpg_qnum' placeholder="請輸入題目順序" style='width:150px;'>
+								</div>
+								<div class="form-group" style='margin-left:0px;' >
+								<div class="col-md-2">
+								<h4>設定場景</h4>
+								</div>
+								<div class="col-md-2">
+								<h4>設定角色</h4>
+								</div>
+								<div class="col-md-8">
+								<h4>設定測驗對話內容</h4>
+								</div>
+								
+								</div>
+								<div class="form-group" id="quest_title" style='margin-left:20px;'>
+										<div class="row">
+											<div class="col-md-2">
+												<select id='rpg_background1' name='rpg_background1'>
+												<option value='0'>請選擇</option>
+												</select>
+											</div>
+											<div class="col-md-2">
+												<select id='rpg_role1' name='rpg_role1'>
+												<option value='0%'>請選擇</option>
+												</select>
+											</div>
+											<div class="col-md-7">
+												<input type="text" class="form-control" id="rpg_content1" name='rpg_content1' placeholder="請輸入對話內容1">
+											</div>
+											<div class="col-md-1">
+												<span class="fa fa-2x fa-plus" id="addfile"></span>
+											</div>
+										</div>
+										<div class="addrow"></div>
+										<input type='hidden' id='Total_file' name='Total_file' value='#'>
+								</div>
+								<div id='quest_content'>
+								<div class="form-group" style='margin-left:0px;' >
+								<div class="col-md-6">
+								<h4>設定選項內容</h4>
+								</div>
+								<div class="col-md-3">
+								<h4>設定加成屬性</h4>
+								</div>
+								<div class="col-md-2">
+								<h4>下一題</h4>
+								</div>
+								
+								</div>
+								<div class="form-group" id="option_content" style='margin-left:10px;'>
+										<div class="row">
+											<div class="col-md-6">
+												<input type="text" class="form-control" id="rpg_option1" name='rpg_option1' placeholder="請輸入選項內容1">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" id="rpg_attr1" name='rpg_attr1' placeholder="請輸入加成屬性1">
+											</div>
+											<div class="col-md-2">
+												<input type="text" class="form-control" id="rpg_next1" name='rpg_next1' placeholder="通往下一題">
+											</div>
+											<div class="col-md-1">
+												<span class="fa fa-2x fa-plus" id="addoption"></span>
+											</div>
+										</div>
+										<div class="addrow"></div>
+										<input type='hidden' id='Total_option' name='Total_option' value='#'>
+								</div>
+								</div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-success" id="addpclassBT" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Data Insert...">新增</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    <!-- editoemCodeModal -->
+                        <div class="modal fade" id="editclassModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+                          <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="editModalLabel">編輯情境內容</h4>
+                              </div>
+                              <div class="modal-body">
+                                
+								<form id="editClassForm"  role="form" data-toggle="validator">
+								<h4 style='margin-left:20px;'>修改題組</h4>
+                                <div class="form-group" style='margin-left:10px;' >
+									<div class="col-md-2">
+									<input type='radio' id='ed_group' name='ed_group' value='0'>性向測驗
+									</div>
+									<div class="col-md-2">
+									<input type='radio' id='ed_group' name='ed_group' value='1'>題組一
+									</div>
+									<div class="col-md-2">
+									<input type='radio' id='ed_group' name='ed_group' value='2'>題組二
+									</div>
+
+									
+									<div class="col-md-2">
+									<input type='radio' id='ed_group' name='ed_group' value='3'>題組三
+									</div>
+									<div class="col-md-2">
+									<input type='radio' id='ed_group' name='ed_group' value='4'>結局
+									</div>
+								</div>
+								
+								<div class="form-group" style='margin-left:0px;' >
+								<div class="col-md-12">
+								<h4>修改題序</h4>
+								</div>
+								</div>
+								<div class="form-group" id="ed_quest_qnum" style='margin-left:20px;'>
+								<input type="text" class="form-control" id="ed_rpg_qnum" name='ed_rpg_qnum' placeholder="請修改題目順序" style='width:150px;'>
+								</div>
+								
+								<div class="form-group" style='margin-left:0px;' >
+								<div class="col-md-2">
+								<h4>修改場景</h4>
+								</div>
+								<div class="col-md-2">
+								<h4>修改角色</h4>
+								</div>
+								<div class="col-md-8">
+								<h4>修改測驗對話內容</h4>
+								</div>
+								
+								</div>
+								<div class="form-group" id="ed_quest_title" style='margin-left:20px;'>
+										<div class="row">
+											<div class="col-md-2">
+												<select id='ed_rpg_background1' name='ed_rpg_background1'>
+												<option value='0'>請選擇</option>
+												</select>
+											</div>
+											<div class="col-md-2">
+												<select id='ed_rpg_role1' name='ed_rpg_role1'>
+												<option value='0%' id='role0'>請選擇</option>
+												</select>
+											</div>
+											<div class="col-md-7">
+												<input type="text" class="form-control" id="ed_rpg_content1" name='ed_rpg_content1' placeholder="請輸入對話內容1">
+											</div>
+											<div class="col-md-1">
+												<span class="fa fa-2x fa-plus" id="ed_file"></span>
+											</div>
+										</div>
+										<div class="editrow"></div>
+										<input type='hidden' id='ed_Total_file' name='ed_Total_file' value='#'>
+										<input type='hidden' id='ed_ser' name='ed_ser' value='#'>
+										<div id='ed_empty'>
+										</div>
+								</div>
+								<div id='ed_quest_content'>
+								<div class="form-group" style='margin-left:0px;' >
+								<div class="col-md-6">
+								<h4>修改選項內容</h4>
+								</div>
+								<div class="col-md-3">
+								<h4>修改加成屬性</h4>
+								</div>
+								<div class="col-md-2">
+								<h4>下一題</h4>
+								</div>
+								
+								</div>
+								<div class="form-group" id="ed_option_content" style='margin-left:10px;'>
+										<div class="row">
+											<div class="col-md-6">
+												<input type="text" class="form-control" id="ed_rpg_option1" name='ed_rpg_option1' placeholder="請輸入選項內容1">
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" id="ed_rpg_attr1" name='ed_rpg_attr1' placeholder="請輸入加成屬性1">
+											</div>
+											<div class="col-md-2">
+												<input type="text" class="form-control" id="ed_rpg_next1" name='ed_rpg_next1' placeholder="通往下一題">
+											</div>
+											<div class="col-md-1">
+												<span class="fa fa-2x fa-plus" id="ed_option"></span>
+											</div>
+										</div>
+										<div class="editrow"></div>
+										<input type='hidden' id='ed_Total_option' name='ed_Total_option' value='#'>
+										<div id='edoption_empty'>
+										</div>
+								</div>
+								</div>
+                                </form>
+								
+								
+                                  
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-success" id="editclassBT" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Data Loading...">儲存</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+						
+                </div>                               
+            </div>
+        </div>
+    </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<script src="plugin/jquery/jquery.dataTables.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="script/websiteInit.js"></script>
+ <script src="script/rpg_quest.js"></script>
+<!--<script src="script/dashboardIndex.js"></script> -->
+</html>

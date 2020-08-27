@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./style/main.css" rel="stylesheet">
+</head>
+
+<body id="websiteIndex-body">
+  <div class="frame-wrapper container container-fluid ">
+    <div id="content-panel" class="optOpen">
+      <div id="content-wrapper">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <blockquote class="marginBottom-0">
+              <h3>
+                <ol class="breadcrumb">
+                  <li class="active">AR Face</li>
+                  <li>
+                    <a href="AccountList?param1=F4A">AR FACE Managment</a>
+                  </li>
+                </ol>
+              </h3>
+            </blockquote>
+          </div>
+        </div>
+        <div class="panel panel-default" id="AccountListContent">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12 assist_tool">
+                <button class="btn btn-info" data-toggle='modal' data-target='#addFaceModal'>
+                  <span class="fa fa-plus"></span>新增毒品資訊</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row container-fluid" id="adminDashboard">
+              <div class="col-md-12">
+                <div class="table-responsive">
+                  <table id="accountListTable" class=" table table-striped table-bordered" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>SER</th>
+                        <th style="max-width: 250px;">drugname</th>
+                        <th>drug information</th>
+                        <th>ar entermode</th>
+                        <th>動作</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+            <!-- addFacesModal -->
+            <div class="modal fade" id="addFaceModal" tabindex="-1" role="dialog" aria-labelledby="ARfaceModalLabel">
+              <div class="modal-dialog modal-md " role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="ARfaceModalLabel">新增毒品資訊</h4>
+                  </div>
+                  <div class="modal-body">
+
+                    <form id="addUserForm" role="form" data-toggle="validator">
+
+                      <div class="form-group col-lg">
+                        <label for="add_drug_name" class="control-label">毒品名稱</label>
+                        <input type="text" class="form-control" name="add_drug_name" id="add_drug_name" required>
+                      </div>
+
+                      <div class="form-group col-lg">
+                        <label for="add_drug_info" class="control-label">毒品資訊</label>
+                        <input type="text" class="form-control" name="add_drug_info" id="add_drug_info" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="bannerimginput" class="col-md control-label" id="imgupload">圖片上傳</label>
+                        <input type="checkbox" name="add_mode" id="add_mode" value="1">3D模式
+                        <div class="col-md">
+                          <span style="color: red;font-weight: bold;">上傳說明</span>
+
+                          <br>
+                          <input type="file" class="form-control" name="class_source" id="class_source" accept="image/jpeg,image/gif,image/png" onchange="previewEvent($(this));"
+                            required>
+                          <br>
+                          <img id="preview_a_source" src="https://via.placeholder.com/280x160/FFFFFF/000000?text=預覽圖片" class="img-thumbnail" style="max-width: 280px;max-height: 160px;">
+                        </div>
+                      </div>
+
+
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success" id="addUserBT">新增</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- editUsersModal -->
+          <div class="modal fade" id="editUsersModal" tabindex="-1" role="dialog" aria-labelledby="ARfaceModalLabel">
+            <div class="modal-dialog modal-md" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="editUsersModalLabel">修改毒品資訊</h4>
+                </div>
+                <div class="modal-body">
+
+                  <form id="editUserForm" role="form" data-toggle="validator">
+
+                    <div class="form-group col-md">
+                      <label for="ed_drug_name" class="control-label">毒品名稱</label>
+                      <input type="text" class="form-control" name="ed_drug_name" id="ed_drug_name" required>
+                    </div>
+                    <div class="form-group col-md">
+                      <label for="ed_drug_info" class="control-label">毒品資訊</label>
+                      <input type="text" class="form-control" name="ed_drug_info" id="ed_drug_info" required>
+                    </div>
+                    <input type="text" name="drug_ser" id="drug_ser" required hidden>
+                    <input type="text" name="old_address" id="old_address" required hidden>
+
+                    <div class="form-group">
+                      <label for="arface_img" class="col-md control-label" id="imgupload">圖片上傳</label>
+                      <input type="checkbox" name="ed_mode" id="ed_mode" value="1" >3D模式
+                      <div class="col-md">
+                        <span id="pic_address"  style="color: red;font-weight: bold;">上傳說明</span>
+
+                        <br>
+                        <input type="file" class="form-control" name="img_source" id="img_source" accept="image/jpeg,image/gif,image/png" onchange="previewEvent($(this));"
+                          required>
+                        <br>
+                        <img id="ed_preview_a_source" src="https://via.placeholder.com/280x160/FFFFFF/000000?text=預覽圖片" class="img-thumbnail" style="max-width: 280px;max-height: 160px;">
+                      </div>
+                    </div>
+
+                  </form>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-success" id="editUserBT">儲存</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/jquery/jquery.dataTables.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="script/websiteInit.js"></script>
+<script src="script/arface.js"></script>
+<!-- <script src="script/dashboardIndex.js"></script> -->
+
+</html>

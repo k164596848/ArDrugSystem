@@ -1,0 +1,25 @@
+footer {
+    position: relative;
+    /*bottom: 0px;*/
+    /*margin-top: 10px;*/
+    /*height:auto;*/
+    width: 100%;
+    color: #FFF;
+}
+.footer-menu {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin: 5px auto;
+    padding: 0px;
+}
+.footer-menu li {
+    float: left;
+    padding: 2px 15px;
+}
+.footer-menu li a {
+    color: #fff;
+}
+.footer-menu li a:hover {
+    text-decoration: underline;
+}

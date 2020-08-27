@@ -1,0 +1,136 @@
+#map .row div{
+	width:6.1vw;
+	height:4.8vh;
+	float: left;
+	position: relative;
+	font-size:25px;
+	text-align: center;
+}
+
+#map .btn_text
+{
+	z-index: 99;
+	position: absolute;
+	left:0;
+	top:10%;
+	right:0;
+	margin:auto;
+	color:#FFF;
+	font-size: 20px;
+	
+}
+
+.questext
+{	
+	z-index:99;
+	font-weight: 700;
+	font-size:16px;
+}
+
+.ques
+{
+	width: 100px;
+}
+
+#lineT1
+{
+	z-index:0;
+	position: absolute;
+	top:-66%;
+	left:-79%;
+	right:0;
+	margin:auto;
+	transform:rotate(135deg);
+	width: 33%;
+}
+#lineT2
+{
+	z-index:0;
+	position: absolute;
+	top:-37%;
+	left:10%;
+	right:0;
+	margin:auto;
+	transform:rotate(0deg);
+	width: 50%;
+}
+
+#A2ques3
+{
+	position:absolute;
+	top:0%;
+	left:-10%;
+	font-size: 25px;
+}
+
+#lineT3
+{
+	z-index:0;
+	position: absolute;
+	top:-62%;
+	left:86%;
+	right:0;
+	margin:auto;
+	transform:rotate(45deg);
+	width:33%;
+}
+#closebtn
+{
+	width: 50%;
+}
+#A1ques3
+{
+	position:absolute;
+	top:-50%;
+	left:-15%;
+	font-size: 25px;
+}
+#A2ques2
+{
+	position:absolute;
+	top:-35%;
+	left:-55%;
+	font-size: 25px;
+}
+#A3ques2
+{
+	position:absolute;
+	top:35%;
+	left:20%;
+	font-size: 25px;
+}
+
+.t_circle
+{
+	width: 35%;
+	top:30%;
+	
+}
+/*
+@media screen and (min-width:1000px) and (max-width:1100px) and (min-height:600px) and (max-height:800px) {
+   #map .btn_text
+   {
+   	font-size: 20px;
+   }
+   .questext
+   {
+   	font-size: 16px;
+   }
+   .t_circle
+   {
+		width: 50%;
+		left:0;
+   }
+   .B .questext
+   {
+   	margin-left: -20%;
+   }
+   .A .questext
+   {
+   	margin-left: -20%;
+   }
+   .E .questext
+   {
+   	margin-left: -20%;
+   }
+}*/

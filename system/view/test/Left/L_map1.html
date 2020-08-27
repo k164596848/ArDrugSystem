@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/animate1.css?ver=4">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+	<link rel="stylesheet" type="text/css" href="./style/loading.css">
+</head>
+<body style="width: 95%;height: 95%">
+
+<!-- <h1 id="load">loading...</h1> -->
+<div id="load">
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute">
+<span class="loadingtext">loading</span>
+<div class="object" id="object_one"></div>
+<div class="object" id="object_two"></div>
+<div class="object" id="object_three"></div>
+
+</div>
+</div>
+ 
+</div>
+
+</div>
+<div style="background-image: url('./pic/background2.png');height: 100vh;opacity:0;background-size: 100%;" id="bg" class=" container-fuild">	
+<div class="container-fuild "  id="all">
+<img src='./pic/home_btn.png' style="position: absolute;z-index: 99;right:1%;top:1%;width:5%" onclick="window.location.href='./test?param1=F4B'" id="home_btn"></img>
+<img src='./pic/map_btn4.png' style="position: absolute;z-index: 99;right:7%;top:1%;width: 5%" id="map_btn"></img>
+	<div class="row" style="height: 32vh"> <!-- 第一層 -->
+	
+		<div class="col-md-3" style="height: 32vh;width: 27%;float: left;">
+			
+			<div style="width:50%;height:70px;margin: auto;position: absolute;left:0;top:-28%;bottom:120px;" id="UPdiv_1">
+				<img src="./pic/arrow.png" id="click_point30" width="100%" style="max-width:100%;position: absolute;top:175%;transform:rotate(180deg);left:55%">
+			</div>
+			
+		</div>
+		<div class="col-md-3" style="height: 32vh;width: 28%;float: left;">
+			<div  id="block1" style="width:100%;height:17.5vh;margin: auto;position: absolute;left:16%;right: 0;top:13%;bottom:0;">
+				<img src="./pic/border3.png" width="85%" style="position: absolute;top:0%;left:0%;" id="border1_img">
+				<img src="./pic/green_complete.png" style="max-width: 65%;position: absolute;top:-32%;left:-12%;transform:rotate(-5deg);" id="stamp1">
+				<div style="width:25vw;height:20vh;position: absolute;top:11%;right:11%;text-align: center;">
+			<p style="font-size: 60px;color: white;font-weight: 400;margin-top: 6%" id="B1text">大麻</p>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;position: relative;float: left;">
+
+			<div  style="width:100%;height:70px;margin: auto;position: absolute;left:20%;right: 0;bottom:1%;">
+				<img src="./pic/arrow.png" id="click_point1" class="click_pointD2" style="width: 100%;position: absolute;top:0%;left:-25%;transform:rotate(215deg)">
+				<img src="./pic/diamond1.png"  id="UP_1" width="100%" style="max-width: 100%;transform:rotate(215deg);bottom: -20%;position: absolute;left:34%">
+
+			</div>
+		</div>
+		<div class="col-md-2" style="height: 32vh;width: 23%;position: relative;float: left;">
+			
+			<div style="height: 32vh;width: 40%;position: relative;">
+				<!-- <span style="font-size: 60px;position: absolute;margin:auto;left:26%;right: 0;bottom:40%;width:100%;height:50px;color:red;font-weight: 600" id="click_text">CLICK</span>
+				<img src="./pic/arrow.png" id="click_point" width="100%" style="width:100%;height:50px;margin: auto;position:absolute;z-index: 99;left:50%;bottom:0;transform:rotate(90deg);"> -->
+			</div>
+		</div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;float: left;"></div>
+		<div class="col-md-2" style="height: 32vh;width: 10%;float: left;"></div>
+	</div>
+
+
+	<div class="row" style="height: 36vh"><!-- 第二層 -->
+		
+		<div class="col-md-3" style="height: 36vh;width: 27%;float: left;">
+			
+			<div style="width:50%;height:70px;margin: auto;position: absolute;left:0;top:-45%;bottom:120px;" id="UPdiv_2">
+				<img src="./pic/arrow.png" style="max-width: 100%;transform:rotate(180deg);position: absolute;left:50%;top:120%" >
+			</div>
+			
+		</div>
+		<div class="col-md-2" style="height: 36vh;width: 28%;float: left;">
+			<div  id="block2" style="	width:100%;height:17.5vh;margin: auto;position: absolute;left:16%;right: 0;top:-33%;bottom:0;">
+				<img src="./pic/border3.png" width="85%" style="position: absolute;top:0;left:0;" id="border2_img">
+				<img src="./pic/green_complete.png" style="max-width: 65%;position: absolute;top:-32%;left:-12%;transform:rotate(-5deg);" id="stamp2">
+				<div style="width:25vw;height:20vh;position: absolute;top:11%;right:11%;text-align: center;">
+			<p style="font-size: 60px;color: white;font-weight: 400;margin-top:6%" id="B2text">大麻</p>
+			</div>
+			</div>
+
+		</div>
+		<div class="col-md-1" style="height: 36vh;width: 6%;position: relative;float: left;"id="UPdiv_2-1">
+			<div style="width:100%;height:70px;margin: auto;position: absolute;left:-19%;right: 0;bottom:0;top:-48%;">
+				<img src="./pic/diamond1.png" style="max-width: 100%;transform:rotate(180deg);position: absolute;left:25%;top:24%" id="UP_2">
+				<img src="./pic/arrow.png" id="click_point2" width="100%" style="max-width: 100%;position: absolute;margin-left: -60%;transform:rotate(180deg);bottom: 0px" class="click_pointD2">
+			</div>
+		</div>
+		<div class="col-md-2" style="height: 36vh;width: 23%;float: left;">
+			<div style="" id="Mapdiv">
+				<div style="margin-top: 20%;text-align:center;width: 140%">
+					<span style="font-size:60px;font-weight: 600;color:white;margin-left:8%;z-index:99" id="Maptext">M A P</span>
+					<img src="./pic/circle2.png" width="100%" style="position: absolute;left:16%;top:-19%;z-index:-1;">
+					<!-- <img src="./pic/power_25.png" width="35%" style="position: absolute;left:50%;top:84%;"> -->
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-md-2" style="height: 36vh;width: 10%;float: left;">
+			<img src="./pic/diamond1.png" style="width: 150%;transform:rotate(0deg);margin-top: 25%;margin-left:60%"id="backbtn" >
+		</div>
+		<div class="col-md-1" style="height: 36vh;width: 6%;float: left;">
+			
+		</div>
+		
+	</div>
+
+
+	<div class="row" style="height: 32vh">
+		
+		<div class="col-md-3" style="height: 32vh;width: 27%;float: left;">
+				<div style="width:50%;height:70px;margin: auto;position: absolute;left:0;top:-65%;bottom:120px;" id="UPdiv_3">
+					<img src="./pic/arrow.png" style="max-width: 100%;transform:rotate(180deg);position: absolute;left:50%;top:40%">
+				</div>
+			</div>
+		<div class="col-md-2" style="height: 32vh;width: 28%;float: left;">
+			<div  id="block3" style="width:100%;height:17.5vh;margin: auto;position: absolute;left:16%;right: 0;top:-94%;bottom:0;">
+				<img src="./pic/border3.png" width="85%" style="position: absolute;top:0;left:0;" id="border3_img">
+				<img src="./pic/green_complete.png" style="max-width: 65%;position: absolute;top:-32%;left:-12%;transform:rotate(-5deg);" id="stamp3">
+				<div style="width:25vw;height:20vh;position: absolute;top:11%;right:11%;text-align: center;">
+			<p style="font-size: 60px;color: white;font-weight: 400;margin-top: 6%" id="B3text">大麻</p>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;float: left;position: relative;">
+			<div style="width:100%;height:70px;margin: auto;position: absolute;left:46%;right: 0;top:-42%;">
+				<img src="./pic/diamond1.png" style="width: 100%;transform:rotate(135deg);position: absolute;top:-75%"  id="UP_3">
+				<img src="./pic/arrow.png" id="click_point3" class="click_pointL2" style="width: 100%;position: absolute;top:-19%;left:11%;transform:rotate(135deg)">
+			</div>
+		</div>
+		<div class="col-md-2" style="height: 32vh;width: 23%;float: left;"></div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;float: left;"></div>
+		<div class="col-md-2" style="height: 32vh;width: 10%;float: left;"></div>
+		</div>
+</div>
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="script/layerstop.js"></script>
+<script src="script/L_map1.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>

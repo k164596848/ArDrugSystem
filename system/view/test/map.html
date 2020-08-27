@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+	<link rel="stylesheet" type="text/css" href="./style/map.css">
+	<meta name="viewport" content="width=device-width, initial-scale=0.8, minimum-scale=0.8, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body> 
+	<div id="map" style="opacity: 0;display: none;position: absolute;left:0;right:0;margin:auto;z-index: 99;margin-top: 1%;width: 82vw;height:84vh;">
+	<img src="./pic/map_bg2.png" width="100%" height="100%" style="position: absolute;z-index: -99;">
+	<!-- <h1 id="mapload" style="font-weight: 700;font-size: 60px;position: absolute;right:0;bottom:3%">loading...</h1> -->
+		<div style="margin-left: auto;margin-right: auto;margin-top: 2.5vh;position: relative;opacity: 0;height:50%" id="map_conent">
+			<div class="row" style="height:7vh;width:80vw;margin-left:0">
+
+				<div ></div>
+				<div ></div>
+				<div ></div>
+				<div ></div>
+				<div >
+					<img src="./pic/line4.png" id="lineT1" class="A">	
+				</div>
+				<div></div>
+				<div>
+
+					<img src="./pic/line-1.png" id="lineT2"  class="A">	
+				</div>
+				<div>
+					<span  id="A2ques3" class="ques A" >
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A2ques3_text" class="questext">A2ques3</span>
+					</span>
+				</div>
+				<div >
+					<img src="./pic/line4.png" id="lineT3" class="A">	
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<img src="./pic/xx.png"  id="closebtn">
+				</div>
+
+				<!--開始第2層-->
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<span  id="A1ques3" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A1ques3_text" class="questext">A1ques3</span>
+					</span>
+
+				</div>
+				<div></div>
+				<div></div>
+				<div>
+					<span id="A2ques2" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;left:10%" class="t_circle">
+						<span id="A2ques2_text" class="questext" style="">A2ques2</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+				<div>
+					<span id="A3ques2" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A3ques2_text" class="questext">A3ques2</span>
+					</span>
+				</div>
+				<div >
+					<span style="position:absolute;top:-70%;left:-41%;font-size: 25px" id="A3ques3" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A3ques3_text" class="questext">A3ques3</span>
+					</span>
+				</div>
+				<div ></div>
+				<div ></div>
+
+				<!--開始第3層-->
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:25%;left:-70%;font-size: 25px" id="E1ques3" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E1ques3_text" class="questext">E1ques3</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:-70%;left:40%;font-size: 25px" id="A1ques2" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A1ques2_text" class="questext">A1ques2</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:53%;left:-21%;font-size: 25px" id="A1ques1" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A1ques1_text" class="questext">A1ques1</span>
+					</span>
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh" id="A1btn" class="A">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:-18px;right:0;top:24%;margin:auto;" id="A1btn_img">
+						<span id="A1btn_text" class="btn_text" style="top:25%;left:-16%">A1btn</span>
+					</div>
+				</div>
+				<div >
+					<div style="position:absolute;width: 7.3vw;height:7.3vh" id="A2btn" class="A">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;right:0;;top:20%;margin:auto;" id="A2btn_img">
+						<span id="A2btn_text" class="btn_text" style="top:25%;">A2btn</span>
+					</div>
+
+				</div>
+				<div >
+					<div style="position:absolute;width: 7.3vw;height:7.3vh" id="A3btn" class="A">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;top:18%;right:-16px;margin:auto;" id="A3btn_img">
+						<span id="A3btn_text" class="btn_text" style="top:25%;left:16%;">A3btn</span>
+					</div>
+					<span style="position:absolute;top:-70%;left:-10%;font-size: 25px" id="A2ques1" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A2ques1_text" class="questext">A2ques1</span>
+					</span>
+				</div>
+				<div >
+					<span style="position:absolute;top:37%;left:70%;font-size: 25px" id="A3ques1" class="ques A">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="A3ques1_text" class="questext">A3ques1</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:30%;left:-60%;font-size: 25px" id="B1ques3" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B1ques3_text" class="questext">B1ques3</span>
+					</span>
+				</div>
+
+				<!--開始第4層-->
+				<div></div>
+				<div>
+					<img src="./pic/line4.png" width="33%" style="z-index:0;position: absolute;top:-100%;left:72%;right:0;margin:auto;transform:rotate(-45deg);" id="lineL1" class="E">
+				</div>
+				<div>
+					<span style="position:absolute;top:0%;left:-15%;font-size: 25px" id="E1ques2" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E1ques2_text" class="questext">E1ques2</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:60%;bottom:-40%;transform: rotate(-135deg);" class="A">
+				</div>
+				<div >
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:32%;top:25%;transform: rotate(-90deg);" class="A">
+				</div>
+				<div >
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;;bottom:-40%;transform: rotate(-55deg);" class="A">
+				</div>
+				<div ></div>
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:-6%;left:-108%;font-size: 25px;width: 100px" id="B1ques2" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B1ques2_text" class="questext">B1ques2</span>
+					</span>
+					<img src="./pic/line4.png" width="33%" style="z-index:0;position: absolute;top:-112%;left:-102%;right:0;margin:auto;transform:rotate(-135deg);" id="lineR1" class="B">
+				</div>
+				<div></div>
+
+				<!--開始第5層-->
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:-20%;left:45%;font-size: 25px" id="E1ques1" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E1ques1_text" class="questext">E1ques1</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div style="width:12.2vw;height:4.8vh;float: left;font-size:30px;text-align: center;position: relative;">
+					<div style="position:absolute;left:-50%;top:6%;right:0;margin:auto;width: 12.2vw;height:4.8vh" id="blockA" class="A">
+						<img src="./pic/circle2.png" width="60%" style="z-index:0;position: absolute;left:-7%;right:0;margin:auto;">
+						<div style="width: 7vw;position:absolute;top:65%;left:21%;width: 60%">
+							<span style="z-index: 99;position: absolute;left:0;right:0;margin:auto;top:22%;font-size: 19px;font-weight:700" vlaue="0" id="MAtext">Atext</span>
+						</div>
+						
+					</div>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:-20%;left:-153%;font-size: 25px" id="B1ques1" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B1ques1_text" class="questext">B1ques1</span>
+					</span>
+				</div>
+				<div></div>
+
+				<!--開始第6層-->
+				<div></div>
+				<div>
+					<img src="./pic/line5.png" width="60%" style="z-index:0;position: absolute;top:18%;left:5%;right:0;margin:auto;transform:rotate(90deg);" id="lineL2" class="E">
+					<span style="position:absolute;top:67%;left:3%;font-size: 25px" id="E2ques2" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E2ques2_text" class="questext">E2ques2</span>
+					</span>
+				</div>
+				<div style="width:7.3vw;height:7.3vh;float: left;font-size:30px;text-align: center;position:relative;">
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:50%;top:1%" id="E1btn" class="E">
+						<img src="./pic/border3.png" width="100%" style="z-index:0;position: absolute;left:0;right:0;margin:auto" id="E1btn_img">
+						<span id="E1btn_text" class="btn_text">E1btn</span>
+					</div>
+				</div>
+				<div >
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:74%;bottom:-65%;transform: rotate(205deg);" class="E">
+				</div>
+				<div ></div>
+				<div ></div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:8%;top:138%;transform: rotate(-90deg);" class="A">
+				</div>
+				<div ></div>
+				<div ></div>
+				<div >
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:-73%;top:55%;transform: rotate(-25deg);bottom:0;" class="B">
+				</div>
+				<div style="width:7.3vw;height:7.3vh;float: left;position: relative;font-size: 30px;position:relative;">
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:-90%;top:-8%" id="B1btn" class="B">
+						<img src="./pic/border3.png" width="100%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="B1btn_img">
+						<span id="B1btn_text" class="btn_text">B1btn</span>
+					</div>
+				</div>
+				<div ></div>
+				<div style="width:7.3vw;height:7.3vh;float: left;position: relative;font-size: 25px">
+					<span style="position:absolute;top:-27%;left:-27%" id="B2ques2" class="ques B">
+						<img src="./pic/circle.png" width="80px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B2ques2_text" class="questext">B2ques2</span>
+					</span>
+					
+				</div>
+
+				<!--開始第7層-->
+				<div ></div>
+				<div>
+					<span style="position:absolute;top:40%;left:40%;font-size: 25px" id="E2ques1" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E2ques1_text" class="questext">E2ques1</span>
+					</span>
+					<span style="position:absolute;top:40%;left:-90%;font-size: 25px" id="E2ques3" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E2ques3_text" class="questext">E2ques3</span>
+					</span>
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:56%;top:-97%" id="E2btn" class="E">
+						<img src="./pic/border3.png" width="100%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="E2btn_img">
+						<span id="E2btn_text" class="btn_text">E2btn</span>
+					</div>
+				</div>
+				<div style="width:12.2vw;height:4.8vh;float: left;font-size:30px;text-align: center;position: relative;">
+					<div style="position:absolute;left:44%;right:0;top:-167%;margin:auto;width: 12.2vw;height:4.8vh" id="blockE" class="E">
+						<img src="./pic/circle2.png" width="60%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;">
+						<img src="./pic/diamond1.png" width="25%" style="position: absolute;left:0%;top:77%;transform: rotate(180deg);">
+						<div style="width: 7vw;position:absolute;left:25%">
+						<span style="z-index: 99;position: absolute;left:0;right:0;margin:auto;top:87%;font-size: 19px;font-weight:700" id="MEtext">Etext</span>
+						</div>
+					</div>
+				</div>				
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:50%;top:-44%;;transform: rotate(200deg);" class="E">
+				</div>
+				<div>
+					<img src="./pic/head.png" width="100%">
+				</div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:3%;top:-51%;transform: rotate(-20deg);" class="B">
+
+				</div>
+				<div style="width:12.2vw;height:4.8vh;float: left;font-size:30px;text-align: center;position: relative;">
+					<div style="position:absolute;left:-108%;right:0;top:-167%;margin:auto;width: 12.2vw;height:4.8vh" id="blockB" class="B">
+						<img src="./pic/circle2.png" width="60%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;">
+						<img src="./pic/diamond1.png" width="25%" style="position: absolute;left:82%;top:65%">
+					</div>
+					<div style="width: 7vw;position:absolute;left:-27%;top:-80%" class="B">
+						<span style="z-index: 99;position: absolute;left:-5%;right:0;margin:auto;font-size: 19px;font-weight:700" id="MBtext">Btext</span>
+					</div>
+					
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:-86%;top:-123%" id="B2btn" class="B">
+						<img src="./pic/border3.png" width="100%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="B2btn_img">
+						<span id="B2btn_text" class="btn_text">B2btn</span>
+
+					</div>
+				</div>
+				<div >
+					<img src="./pic/line5.png" width="60%" style="z-index:0;position: absolute;top:-263%;left:-21%;right:0;margin:auto;transform:rotate(90deg);" id="lineR2" class="B">
+				</div>
+				<div >
+					<span style="position:absolute;top:40%;left:-110%;font-size: 25px" id="B2ques1" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B2ques1_text" class="questext">B2ques1</span>
+					</span>
+					<span style="position:absolute;top:40%;left:20%;font-size: 25px;text-align: left" id="B2ques3" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B2ques3_text" class="questext">B2ques3</span>
+					</span>
+				</div>
+
+				<!--開始第8層-->
+				<div></div>
+				<div>
+					<img src="./pic/line4.png" width="33%" style="z-index:0;position: absolute;top:5%;left:40%;right:0;margin:auto;transform:rotate(45deg);" id="lineL3" class="E">
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left: 57%;top:-48%" id="E3btn" class="E">
+						<img src="./pic/border3.png" width="100%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="E3btn_img">
+						<span id="E3btn_text" class="btn_text">E3btn</span>
+					</div>
+					<span style="position:absolute;top:95%;left:59%;font-size: 25px" id="E3ques1" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E3ques1_text" class="questext">E3ques1</span>
+					</span>
+				</div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:92%;top:-97%;transform: rotate(155deg);" class="E">
+				</div>
+				<div></div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:78%;top:3%;transform: rotate(135deg);" id="point_DL" class="D">
+				</div>
+				<div></div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:-23%;top:3%;transform: rotate(45deg); " id="point_DR" class="C">
+				</div>
+				<div></div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:-51%;top:-102%;transform: rotate(25deg);" class="B">
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:-85%;top:-75%" id="B3btn" class="B">
+						<img src="./pic/border3.png" width="100%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="B3btn_img">
+						<span id="B3btn_text" class="btn_text">B3btn</span>
+					</div>
+				</div>
+				<div>
+					<img src="./pic/line4.png" width="33%" style="z-index:0;position: absolute;top:-63%;left:-76%;right:0;margin:auto;transform:rotate(125deg);" id="lineR3" class="B">
+				</div>
+				<div></div>
+
+				<!--開始第9層-->
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:91%;left:10%;font-size: 25px" id="E3ques2" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E3ques2_text" class="questext">E3ques2</span>
+					</span>
+				</div>
+				<div></div>
+				<div style="width:12.2vw;height:4.8vh;float: left;font-size:30px;text-align: center;position: relative;">
+					<div style="position:absolute;left:18%;right:0;top:-63%;margin:auto;width: 12.2vw;height:4.8vh" id="blockD" class="D">
+						<img src="./pic/circle2.png" width="60%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" >
+						<img src="./pic/diamond1.png" width="25%" style="position: absolute;left:-4%;top:160%;transform: rotate(135deg);" id="point_DL2">
+						<div style="width: 7vw;position:absolute;left:25%;top:14%">
+							<span style="z-index: 99;position: absolute;left:0;right:0;margin:auto;top:74%;font-size: 19px;font-weight:700" id="MDtext">Dtext</span>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+				<div></div>
+				<div style="width:12.2vw;height:4.8vh;float: left;font-size:30px;text-align: center;position: relative;">
+					<div style="position:absolute;left:-36%;right:0;top:-63%;margin:auto;width: 12.2vw;height:4.8vh" id="blockC" class="C">
+						<img src="./pic/circle2.png" width="60%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;">
+						<img src="./pic/diamond1.png" width="25%" style="position: absolute;left:91%;top:165%;transform: rotate(45deg);" id="point_DR3">
+						<div style="width: 7vw;position:absolute;left:26%;top:14%">
+							<span style="z-index: 99;position: absolute;left:0;right:0;margin:auto;top:74%;font-size: 19px;font-weight:700" id="MCtext">Ctext</span>
+						</div>
+					</div>
+				</div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:-9%;left:-17%;font-size: 25px;text-align: left" id="B3ques1" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B3ques1_text" class="questext">B3ques1</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:77%;left:-47%;font-size: 25px;text-align: left" id="B3ques2" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B3ques2_text" class="questext">B3ques2</span>
+					</span>
+
+				</div>
+				<div>
+					<span style="position:absolute;top:150%;left:-48%;font-size: 25px;text-align: left" id="B3ques3" class="ques B">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="B3ques3_text" class="questext">B3ques3</span>
+					</span>
+				</div>
+
+				<!--開始第10層-->
+				<div></div>
+				<div>
+					<span style="position:absolute;top:85%;left:40%;font-size: 25px" id="E3ques3" class="ques E">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="E3ques3_text" class="questext">E3ques3</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:-21%;top:44%;transform: rotate(115deg);" id="point_DL1" class="D">
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:65%;top:44%;transform: rotate(55deg);" id="point_DL2" class="D">
+				</div>
+				<div></div>
+				<div></div>
+				<div>
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:-80%;top:49%;transform: rotate(115deg);" id="point_DR1" class="C">
+					<img src="./pic/diamond1.png" width="50%" style="position: absolute;left:-5%;top:40%;transform: rotate(55deg);" id="point_DR2" class="C">
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+
+				<!--開始第11層-->
+				<div></div>
+				<div></div>
+				<div>
+					<img src="./pic/lineDL.png" width="110%" style="z-index:-1;position: absolute;top:135%;left:20%;right:0;margin:auto;transform:rotate(0deg);" id="lineDL1" class="D">
+					<span style="position:absolute;top:126%;left:6%;font-size: 25px;text-align: left" id="D1ques1" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D1ques1_text" class="questext">D1ques1</span>
+					</span>
+				</div>
+				<div></div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;top:30%;left:-98%" id="D1btn" class="D">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="D1btn_img">
+						<span id="D1btn_text" class="btn_text">D1btn</span>
+					</div>
+
+					<span style="position:absolute;top:70%;left:-60%;font-size: 25px;text-align: left" id="D2ques1" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D2ques1_text" class="questext">D2ques1</span>
+					</span>
+					<img src="./pic/lineDL-2.png" width="100%" style="z-index:-1;position: absolute;top:135%;left:-60%;right:0;margin:auto;transform:rotate(0deg);" id="lineDL2" class="D">
+				</div>
+				<div >
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;top:30%;left:-80%" id="D2btn" class="D">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="D2btn_img">
+						<span id="D2btn_text" class="btn_text">D2btn</span>
+					</div>
+					<img src="./pic/lineDL.png" width="100%" style="z-index:-1;position: absolute;top:135%;left:30%;right:0;margin:auto;transform:rotate(0deg);" id="lineDL3" class="D">
+					<span style="position:absolute;top:140%;left:-25%;font-size: 25px;text-align: left" id="D3ques1" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D3ques1_text" class="questext">D3ques1</span>
+					</span>
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;top:30%;left:-65%" id="D3btn" class="D">
+							<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="D3btn_img">
+							<span id="D3btn_text" class="btn_text">D3btn</span>
+					</div>
+
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:-28%;top:30%" id="C1btn" class="C">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="C1btn_img">
+						<span id="C1btn_text" class="btn_text">C1btn</span>
+					</div>
+					<img src="./pic/lineDR-3.png" width="100%" style="z-index:-1;position: absolute;top:135%;left:-10%;right:0;margin:auto;transform:rotate(0deg);" id="lineDR1"  class="C">
+					<span style="position:absolute;top:150%;left:62%;font-size: 25px;text-align: left" id="C1ques1" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C1ques1_text" class="questext">C1ques1</span>
+					</span>
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:-7%;top:30%" id="C2btn"  class="C">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="C2btn_img">
+						<span id="C2btn_text" class="btn_text">C2btn</span>
+					</div>
+					<img src="./pic/lineDR-3.png" width="100%" style="z-index:-1;position: absolute;top:133%;left:30%;right:0;margin:auto;transform:rotate(0deg);" id="lineDR2"  class="C">
+
+
+				</div>
+				<div>
+					<div style="position:absolute;width: 7.3vw;height:7.3vh;left:11%;top:30%" id="C3btn"  class="C">
+						<img src="./pic/border3.png" width="90%" style="z-index:0;position: absolute;left:0;right:0;margin:auto;" id="C3btn_img">
+						<span id="C3btn_text" class="btn_text">C3btn</span>
+					</div>
+					<span style="position:absolute;top:70%;left:-20%;font-size: 25px;text-align: left" id="C2ques1" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C2ques1_text" class="questext">C2ques1</span>
+					</span>
+				</div>
+				<div style="width:7.3vw;height:7.3vh;float: left;font-size: 30px;position: relative;">
+					<img src="./pic/lineDR-3.png" width="100%" style="z-index:0;position: absolute;top:87%;;right:0;margin:auto;transform:rotate(0deg);" id="lineDR3"  class="C">
+					<span style="position:absolute;top:87%;left:53%;font-size: 25px;text-align: left" id="C3ques1" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C3ques1_text" class="questext">C3ques1</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+
+				<!--開始第12層-->
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:9%;left:-40%;font-size: 25px;text-align: left" id="D1ques2" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D1ques2_text" class="questext">D1ques2</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:60%;left:10%;font-size: 25px;text-align: left" id="D2ques2" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D2ques2_text" class="questext">D2ques2</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:44%;left:55%;font-size: 25px;text-align: left" id="D3ques2" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D3ques2_text" class="questext">D3ques2</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:104%;left:-8%;font-size: 25px;text-align: left" id="C1ques2" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C1ques2_text" class="questext">C1ques2</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:85%;left:10%;font-size: 25px;text-align: left" id="C2ques2" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C2ques2_text" class="questext">C2ques2</span>
+					</span>
+
+				</div>
+				<div >
+					<span style="position:absolute;top:70%;left:95%;font-size: 25px;text-align: left" id="C3ques2" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C3ques2_text" class="questext">C3ques2</span>
+					</span>
+
+				</div>
+				<div></div>
+				<div></div>
+				<!--開始第13層-->
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:30%;left:-75%;font-size: 25px;text-align: left" id="D1ques3" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D1ques3_text" class="questext">D1ques3</span>
+					</span>
+				</div>
+				<div >
+					<span style="position:absolute;top:30%;left:-20%;font-size: 25px;text-align: left" id="D2ques3" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D2ques3_text" class="questext">D2ques3</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:56%;left:25%;font-size: 25px;text-align: left" id="D3ques3" class="ques D">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="D3ques3_text" class="questext">D3ques3</span>
+					</span>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+					<span style="position:absolute;top:30%;left:-90%;font-size: 25px;text-align: left" id="C1ques3" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C1ques3_text" class="questext">C1ques3</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:30%;left:-60%;font-size: 25px;text-align: left" id="C2ques3" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C2ques3_text" class="questext">C2ques3</span>
+					</span>
+				</div>
+				<div>
+					<span style="position:absolute;top:113%;left:20%;font-size: 25px;text-align: left" id="C3ques3" class="ques C">
+						<img src="./pic/circle.png" width="70px" style="z-index: -1;position: absolute;" class="t_circle">
+						<span id="C3ques3_text" class="questext">C3ques3</span>
+					</span>
+				</div>
+				<div ></div>
+
+			</div>
+			<!-- </div> -->
+		</div>
+	</div>
+
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="script/map.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>

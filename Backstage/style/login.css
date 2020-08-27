@@ -1,0 +1,47 @@
+
+.login-panel {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,10);
+    border:none;
+}
+.login-panel input {
+    width: 100%;
+    border: 1px #ddd solid;
+    padding: 20px;
+}
+.login-panel a.input-forget {
+    color: #FFF;
+}
+.login-panel  .input-username {    
+    border-radius: 5px 5px 0px 0px;    
+}
+.login-panel  .input-password {
+    border-top: none;
+    border-radius: 0px 0px 5px 5px;
+} 
+.login-panel  .input-none{
+    border-top: none;
+    border-radius:0px;
+}
+.panel-primary > .panel-heading{
+    background-color: #FFF !important;
+    color: #333 !important;
+    border-bottom: none !important;
+}
+.panel-heading > img{
+    max-width: 100px !important;
+}
+.btn-yellow{
+    background-color: rgb(204,0,204);
+    color: #FFF; 
+    border: 1px solid #ddd;
+}
+.btn-yellow:hover, .btn-yellow:active, .btn-yellow:focus {
+    background-color: rgb(191, 32, 170);
+    color: #FFF; 
+    border: 1px solid #ddd;
+}
+.form-footer button:first-child {
+    margin-right: 20px;
+}

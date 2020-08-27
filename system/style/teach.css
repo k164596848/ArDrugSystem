@@ -1,0 +1,50 @@
+.all_dis
+
+{ 
+  animation-delay:0.5s;
+  animation-duration:3s;
+  animation-name: all_dis;
+  animation-fill-mode:forwards;
+}
+
+.all_show
+
+{ 
+  animation-delay:0.5s;
+  animation-duration:1s;
+  animation-name: all_show;
+  animation-fill-mode:forwards;
+}
+
+
+@keyframes all_dis{ /*全部畫面消失*/
+    0%{
+       
+       opacity: 1;
+       
+      }
+    25%
+    {
+     opacity: 0;
+    }
+
+   50%
+   	{
+   	  opacity: 0;
+   	}
+    100%{
+        
+        opacity: 1; 
+      }
+  }
+@keyframes all_show{ /*全部畫面消失*/
+    0%{
+       
+       opacity: 0;
+       
+      }
+    100%{
+        
+        opacity: 1; 
+      }
+  }

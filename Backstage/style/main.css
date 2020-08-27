@@ -1,0 +1,12 @@
+@import url("../plugin/bootstrap/css/bootstrap.min.css");
+@import url("../plugin/bootstrap/css/dataTables.bootstrap.min.css");
+@import url("../plugin/fontawesome/css/font-awesome.min.css");
+@import url("header.css");
+@import url("common.css");
+@import url("admin.css");
+@import url("index.css");
+@import url("login.css");
+@import url("animate.css");
+@import url("cust.css");
+@import url("loading.css");
+@import url("hover.css");

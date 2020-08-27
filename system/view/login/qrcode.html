@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>AR測試</title>
+</head>
+<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/ar.css">
+
+<body>
+  <div id="wrap" class="container-fuild" style="margin-top: 5%">
+    <div class="container">
+      <div class="col-sm-12" class="text-center">
+        <div class="text-center">
+          <label class="label label-info">AR毒品學習系統登入</label>
+        </div>
+        <div class="text-center" style="margin-top: 20px" id="qrcodenopsw">
+		<a href='./login?param1=F4A' >
+          <button class="btn btn-primary" >手動登入</button>
+		  </a>
+		  <br>
+		  <br>
+		  <button class="btn btn-primary" id="loginbyhandBt">條碼登入</button>
+          <!-- onclick="javascript:location.href='./login?param1=F4A'" -->
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container" id="showqrcode">
+      <!-- <div class="col-sm-4">
+            <div id="qrcodediv1" class="qrcodediv"><div id="qrcode1"></div>admin</div>
+          </div>
+          <div class="col-sm-4">
+            <div id="qrcodediv2" class="qrcodediv"><div id="qrcode2"></div>U001</div>
+          </div> -->
+    </div>
+  </div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="plugin/jquery/jquery.qrcode.min.js"></script>
+<script src='script/qrcode.js'></script>
+
+</html>

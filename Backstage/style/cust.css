@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/*後台-帳號管理*/
+.assist_tool .btn span{
+	margin: 0 5px;
+}
+.btn-addsth {
+	background-color: #FFD418 !important;
+}
+.btn-circle {
+/*
+    border-radius: 100%;
+    padding: 5px 10px;
+*/
+    margin-right: 2px;
+}
+div.dataTables_processing 
+{ 
+    z-index: 1; 
+}
+#addUserForm .btn {
+	padding: 9px 12px;
+}
+#loadingDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    top: 0;
+}
+#loadingDiv .loader {
+    margin: 30% auto;
+}
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout-warning {
+    border-left-color: #FFB00D;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+
+/*搜尋引擎*/
+#sys-brand {
+    width: 180px;
+    height: 45px;
+}
+#searchTable {
+    max-width: 840px;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+#searchTable tbody tr img {
+    width: 140px;
+    height: 80px;
+}
+#searchTable tbody tr td {
+   line-height: 80px;
+}
+#searchTable tbody tr td a {
+    text-decoration: underline;
+    color: #000;
+}

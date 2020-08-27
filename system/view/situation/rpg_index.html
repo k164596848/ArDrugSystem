@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>情境RPG</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/rpg_index.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+
+	<script src="https://blocklypro.webduino.io/node_modules/jquery/dist/jquery.min.js?rev=2f6b11a7e914718e0290410e85366fe9"></script>
+	<script src="https://blocklypro.webduino.io/dist/lib/webduino-all-0.4.20.min.js?rev=4426739c00d85325cb2d3d701fa50666"></script>
+	<script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js?rev=ad06da24174defd84a3752446fc7b672"></script>
+	<script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js?rev=c0bfd493efd477d098a4ae9e92b13880"></script>
+	<script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js?rev=683a69503433786202911b4d9f766100"></script>
+
+</head>
+<body>
+	
+
+	<div class="container-fuild" id="rpg_index" >
+		<audio controls autoplay='ture' loop='loop' style="position: absolute;bottom:0;right:0">
+		<source src="./pic/rpgmusic.mp3">
+	</audio>
+		<img src="./pic/class.jpg" width="100%" style="position: absolute;z-index: -1;top:0;max-height:100%;opacity:0.8" >
+		<div style="width: 70%;margin-left: auto;margin-right: auto;margin-top: 5%;">
+			<img src="./pic/rpgfont.png" width="100%" id="title" class="title">
+		</div>
+		
+		<div style="width:188px;margin-left: auto;margin-right: auto;margin-top: 14%;"><button style="font-size: 40px;border: 8px solid rgb(254,206,14);border-radius: 11px;background: #FFF;color: #DE8700;" id="start">進入遊戲</button></div>
+		<button style="width:80px;position: absolute;top:10px;right: 2%;background: none;border:none;" id="backindex">
+		<img src="./pic/backindex.png" style="max-width: 100%">
+	</button>
+	</div>
+
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<!-- <script src="script/rpg_title.js"></script> -->
+<script src="script/webduino.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>

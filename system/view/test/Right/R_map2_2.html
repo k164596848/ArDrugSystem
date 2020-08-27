@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+	<link rel="stylesheet" type="text/css" href="./style/R_map2-2.css?ver=2">
+	<link rel="stylesheet" type="text/css" href="./style/animate2.css?ver=2">
+	<link rel="stylesheet" type="text/css" href="./style/loading.css">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+</head>
+<body  style="height: 95%;width: 95%;">
+<!-- <h1 id="load">loading...</h1> -->
+<div id="load">
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute">
+<span class="loadingtext">loading</span>
+<div class="object" id="object_one"></div>
+<div class="object" id="object_two"></div>
+<div class="object" id="object_three"></div>
+
+</div>
+</div>
+ 
+</div>
+
+</div>
+<div style="background-image: url('./pic/background2.png');height: 100vh;opacity:0;background-size: 100%;" class="container-fuild" id="bg">
+<div class="container-fuild " id="all" >
+<img src='./pic/home_btn.png' onclick="window.location.href='./test?param1=F4B'" id="home_btn"></img>
+<img src='./pic/map_btn4.png' id="map_btn"></img>
+<div style="position: absolute;left: 16%;top: 62%;font-size: 43px;font-weight: 900;color: lightslategray;width:17%;text-align: center;">
+	<span>(<span id="drugname"></span>)</span>
+</div>
+	<div class="row" style="height: 32vh"> <!-- 第一層 -->
+		<div class="col-md-2" style="height: 32vh;width: 10%;float: left;"></div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;float: left;"></div>
+		<div class="col-md-2" style="height: 32vh;width: 23%;position: relative;float: left;"></div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;position: relative;float: left;">
+			<div id="UPdiv_1">
+				<img src="./pic/arrow.png" id="click_point2" class="click_point2">
+				<img src="./pic/diamond1.png"  id="UP_1">
+			</div>
+		</div>
+		<div class="col-md-3" style="height: 32vh;width: 28%;float: left;">
+			<div  id="block1">
+				<div id="B1text_div">
+				<span id="B1text">1-1-1</span>			
+				</div>
+				<img src="./pic/border.png" id="border1_img">
+				<img src="./pic/complete.png" id="stamp1">
+			</div>
+		</div>
+		<div class="col-md-3" style="height: 32vh;width: 27%;float: left;">
+
+			<div style="width:50%;height:70px;margin: auto;position: absolute;left:0;top:0px;bottom:120px;" id="UPdiv_1-2">
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+	<div class="row" style="height: 36vh"><!-- 第二層 -->
+		<div class="col-md-2" style="height: 36vh;width: 10%;float: left;">
+				<img src="./pic/diamond1.png" id="backbtn">
+		</div>
+		<div class="col-md-1" style="height: 36vh;width: 6%;float: left;">
+			<div id="UPdiv_2"></div>
+		</div>
+		<div class="col-md-2" style="height: 36vh;width: 23%;float: left;">
+			<div id="Mapdiv">
+				<img src="./pic/circle2.png"  id="map_img">
+				<div id="Maptext_div">
+					<span id="Maptext">1-1</span>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-md-1" style="height: 36vh;width: 6%;position: relative;float: left;" id="UPdiv_2-1">
+		
+		</div>
+		<div class="col-md-2" style="height: 36vh;width: 28%;float: left;">
+
+		
+		</div>
+		<div class="col-md-3" style="height: 36vh;width: 27%;float: left;">
+		
+		</div>
+	</div>
+
+
+	<div class="row" style="height: 32vh">
+		<div class="col-md-2" style="height: 32vh;width: 10%;float: left;"></div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;float: left;"></div>
+		<div class="col-md-2" style="height: 32vh;width: 23%;float: left;"></div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;position: relative;float: left;">
+			<div id="UPdiv_3">
+				<img src="./pic/arrow.png" id="click_point4" class="click_point4">
+				<img src="./pic/diamond1.png" id="UP_2">
+			</div>
+		</div>
+		<div class="col-md-2" style="height: 32vh;width: 28%;float: left;">
+			<div id="block2">
+				<img src="./pic/border.png" id="border2_img">
+				<img src="./pic/complete.png" id="stamp2"> 
+				<div id="B2text_div">
+					<span id="B2text">3</span></div>				
+				</div>
+		</div>
+	<div class="col-md-3" style="height: 32vh;width: 27%;float: left;">
+
+			<div style="width:50%;height:70px;margin: auto;position: absolute;left:0;top:-75%;bottom:120px;" id="UPdiv_3-1">
+			</div>
+			
+		</div>
+		
+	</div>
+	</div>
+</div>
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="script/R_map2_2.js"></script>
+<script src="script/layers2.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>

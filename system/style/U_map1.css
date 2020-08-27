@@ -1,0 +1,316 @@
+#home_btn
+{
+	position: absolute;
+	z-index: 99;
+	right:1%;
+	bottom:1%;
+	width: 5%;
+}
+
+#map_btn
+{
+	position: absolute;
+	z-index: 99;
+	right:10%;
+	bottom:1%;
+	width: 5%;
+}
+
+#UPdiv_1
+{
+	width:30%;
+	height:70px;
+	margin: auto;
+	position: absolute;
+	left:16%;
+	top:65%;
+}
+
+#arrow1
+{
+	max-width: 80%;
+	transform:rotate(-90deg);
+}
+
+#UPdiv_2
+{
+	width:30%;
+	height:70px;
+	margin: auto;
+	position: absolute;
+	left:44%;
+	top:65%;
+}
+
+#arrow2
+{
+	max-width: 80%;
+	transform:rotate(-90deg);
+}
+
+#UPdiv_3
+{
+	width:30%;
+	height:70px;
+	margin: auto;
+	position: absolute;
+	left:44%;
+	top:65%;
+}
+
+#arrow3
+{
+	max-width: 80%;
+	transform:rotate(-90deg);
+}
+
+#block1
+{
+	height:25vh;
+}
+
+#border1_img
+{
+	position: absolute;
+	top:15%;
+	left:27%;
+	z-index:-1;
+	width: 65%;
+}
+
+#stamp1
+{
+	max-width: 55%;
+	position: absolute;
+	top:-15%;
+	left:15%;
+	transform:rotate(-5deg);
+}
+
+#B1text
+{
+	font-size:60px;
+	font-weight: 600;
+	color:white;
+	margin-top: 20%;
+	z-index:99;
+}
+
+#block2
+{
+	height: 25vh;
+}
+
+#border2_img
+{
+	position: absolute;
+	top:0;
+	left:19%;
+	z-index:-1;
+	width: 65%;
+}
+
+#stamp2
+{
+	max-width: 55%;
+	position: absolute;
+	top:-35%;
+	left:5%;
+	transform:rotate(-5deg);
+}
+
+#B2text
+{
+	font-size:60px;
+	font-weight: 600;
+	color:white;
+	margin-top: 20%;
+	z-index:99;
+}
+#block3
+{
+	height: 25vh;
+}
+
+#border3_img
+{
+	position: absolute;
+	top:15%;
+	left:5%;
+	z-index:-1;
+	width: 65%;
+}
+
+#stamp3
+{
+	max-width: 55%;
+	position: absolute;
+	top:-8%;
+	left:5%;
+	transform:rotate(-5deg);
+}
+
+#B3text
+{
+	font-size:60px;
+	font-weight: 600;
+	color:white;
+	margin-top: 20%;
+	z-index:99;
+}
+
+#UP_1_div
+{
+	width:10vh;
+	height:10vh;
+	margin: auto;
+	position: absolute;
+	left:-85%;
+	top:100%;
+	bottom:0px;
+	right: 0;
+}
+#UP_1
+{
+	max-width: 100%;
+	transform:rotate(-135deg);
+}
+
+#click_point1
+{
+	width: 100%;
+	position: absolute;
+	top:15%;
+	left:-15%;
+	transform:rotate(-135deg);
+}
+
+#UP_2_div
+{
+	width:10vh;
+	height:10vh;
+	margin: auto;
+	position: absolute;
+	left:10%;
+	top:25px;
+	bottom:0px;
+	right: 0
+}
+
+#UP_2
+{
+	max-width: 100%;
+	transform:rotate(-90deg);
+}
+
+#click_point2
+{
+	width: 100%;
+	position: absolute;
+	top:0%;
+	/*left:70%;*/
+	transform:rotate(-90deg);
+}
+
+#UP_3_div
+{
+	width:10vh;
+	height:10vh;
+	margin: auto;
+	position: absolute;
+	left:90%;
+	top:100%;
+	bottom:0px;
+	right: 0;
+}
+
+#UP_3
+{
+	max-width: 100%;
+	transform:rotate(-45deg);
+}
+
+#click_point3
+{
+	width: 100%;
+	position: absolute;
+	top:30%;
+	left:30%;
+	transform:rotate(-45deg);
+}
+
+#Maptext
+{
+	font-size:60px;
+	font-weight: 600;
+	color:white;
+	z-index:99;
+}
+#Maptext_div
+{
+	margin-top: 8%;
+	text-align:center;
+	margin-left: 3%;
+}
+#map_img
+{
+	position: absolute;
+	left:41%;
+	max-height: 100%;
+	z-index:-1;
+}
+#backbtn
+{
+	max-height: 150%;
+	position: absolute;
+	left:47%;
+	transform:rotate(90deg);
+}
+
+
+#B1text_div
+{
+	margin-top: 16%;
+	text-align:center;
+	width: 70%;
+	margin-left: 25%;
+}
+#B2text_div
+{
+	margin-top: 10%;
+	text-align:center;
+
+}
+#B3text_div
+{
+	margin-top: 16%;
+	text-align:center;
+	width: 70%;
+}
+#Maptext
+{
+	margin-top: -2%;
+}
+
+@media screen and (min-width:1000px) and (max-width:1100px) and (min-height:600px) and (max-height:800px) {
+   #border3_img
+   {
+   	width: 80%;
+   }
+   #border2_img
+   {
+   	width: 80%;
+   }
+   #border1_img
+   {
+   	width: 80%;
+   }
+   #UP_2_div
+   {
+   	    left: 22%;
+   }
+   #backbtn
+   {
+   	left:48%;
+   }
+}

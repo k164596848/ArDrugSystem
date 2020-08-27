@@ -1,0 +1,73 @@
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+</head>
+<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<body>
+	<div id="stage"></div>
+	<div id="boderdiv"></div>
+	<div id="alertdiv" hidden>
+		<div class="content" id="content">
+			<div style="margin: 10px">確定選擇</div>
+			<div style="margin: 20px" id="showtext" ></div>
+			
+			<img src="pic/borrow-in.png" alt="" width="80px" id="yesBt">
+			<img src="pic/borrow-out.png" alt="" width="80px" id="noBt">
+			<input type="text" name="" id="locationhref" hidden>
+		</div>
+	</div>
+	<div class="arow">
+		<a href="#" id="btn1" location="./test?param1=F4B">
+			<span>概念構圖</span>
+			<span>概念構圖</span>
+			<span>概念構圖</span>
+			<span>概念構圖</span>
+		</a>
+		<a href="#" id="btn2" location="./ar_face?param1=F4D">
+			<span>毒模毒樣</span>
+			<span>毒模毒樣</span>
+			<span>毒模毒樣</span>
+			<span>毒模毒樣</span>
+		</a>
+		<a href="#" id="btn3" location="./situation?param1=F4D">
+			<span>情境模擬</span>
+			<span>情境模擬</span>
+			<span>情境模擬</span>
+			<span>情境模擬</span>
+		</a>
+		<a href="#" id="btn4" location="./learnlog?param1=LL1">
+			<span>學習歷程</span>
+			<span>學習歷程</span>
+			<span>學習歷程</span>
+			<span>學習歷程</span>
+		</a>
+	</div>
+</body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script>
+	$("a").click(function (event) {
+		var aid = $(this).attr("id");
+		var bgcolor = $("#" + aid + ":hover span").css('background');
+		var location = $(this).attr('location');
+		$("#alertdiv").show();
+		$("#showtext").text($(this).find("span:first-child").text());
+		$("#stage").css('background', bgcolor);
+		$("#locationhref").val(location);
+		$("a").css("pointer-events", "none");
+	});
+	$("#yesBt").click(function (event) {
+		var location = $("#locationhref").val();
+		$("#stage").css('animation-name', 'example');
+		setTimeout("location.href='" + location + "'", 1000);
+	});
+	$("#noBt").click(function (event) {
+		$("#alertdiv").hide();
+		$("a").css("pointer-events", "auto");
+	});
+</script>
+
+</html>

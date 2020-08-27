@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心智圖</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+	<link rel="stylesheet" type="text/css" href="./style/R_map2.css?ver=4">
+	<link rel="stylesheet" type="text/css" href="./style/loading.css">
+</head>
+<body style="height: 95%;width: 95%;">
+<!-- <h1 id="load">loading...</h1> -->
+<div id="load">
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute">
+<span class="loadingtext">loading</span>
+<div class="object" id="object_one"></div>
+<div class="object" id="object_two"></div>
+<div class="object" id="object_three"></div>
+
+</div>
+</div>
+ 
+</div>
+
+</div>
+<div style="background-image: url('./pic/background2.png');height: 95%;width: 95%;opacity:0;background-size: 100%;" class=" container-fuild" id="bg">
+<div class="container-fuild "  id="all">
+<img src='./pic/home_btn.png' style="position: absolute;z-index: 99;right:1%;top:1%;width:5%" onclick="window.location.href='./test?param1=F4B'" id="home_btn"></img>
+<img src='./pic/map_btn4.png' style="position: absolute;z-index: 99;right:7%;top:1%;width:5%"  id="map_btn"></img>
+<div style="position: absolute;right:17%;top: 56%;font-size: 43px;font-weight: 900;color: lightslategray;width:17%;text-align: center;">
+	<span>(<span id="drugname"></span>)</span>
+</div>
+
+	<div class="row" style="height: 20vh"> <!-- 第一層 -->
+
+		<div class="col-md-2" style="height: 20vh;width: 10%;float: right;"></div>
+		<div class="col-md-1" style="height: 20vh;width: 6%;float: right;"></div>
+		<div class="col-md-2" style="height: 20vh;width: 23%;position: relative;float: right;">
+			
+			<div style="height: 32vh;width: 40%;position: relative;">
+				<!-- <span style="font-size: 60px;position: absolute;margin:auto;left:120%;right: 0;bottom:40%;width:100%;height:50px;color:red;font-weight: 600" id="click_text">CLICK</span> -->
+				<!-- img src="./pic/arrow.png" id="click_point" width="100%" style="width:100%;height:50px;margin: auto;position:absolute;z-index: 99;left:150%;bottom:0;transform:rotate(90deg);"> -->
+			</div>
+		</div>
+
+		<div class="col-md-1" style="height: 20vh;width: 6%;position: relative;float: right;">
+
+			<div id="UPdiv_1" style="width:100%;height:70px;margin: auto;position: absolute;left:64%;right: 0;bottom:-56%;">
+				<img src="./pic/arrow.png" id="click_point2" class="click_point4"  width="100%" style="max-width: 100%;position: absolute;margin-left: 50%;transform:rotate(210deg);left:100%;top:80%">
+				<img src="./pic/diamond1.png"  id="UP_1" width="100%" style="max-width: 100%;height:auto;transform:rotate(215deg);bottom: -30%;position: absolute;left:100%">
+
+			</div>
+		</div>
+
+		<div class="col-md-3" style="height: 20vh;width: 28%;float: right;">
+			<div style="width:100%;height:17.5vh;margin: auto;position: absolute;left:30%;right: 0;top:143%;bottom:0"  id="block1">
+			<img src="./pic/border3.png" width="85%" style="position: absolute;top:-10px;left:10px;z-index: -1;" id="border1_img">
+			<img src="./pic/complete.png" style="max-width: 65%;position: absolute;left:-13%;transform:rotate(-5deg);margin-top: -5%" id="stamp1">
+				<div style="margin-top: 10%;text-align:center;width: 90%">
+					<span style="font-size:60px;font-weight: 600;color:white;margin-top: 20%;z-index: 99;" id="B1text">3</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3" style="height: 20vh;width: 27%;float: right;">
+		
+			
+		</div>
+	</div>
+
+
+	<div class="row" style="height: 36vh"><!-- 第二層 -->
+		
+		<div class="col-md-2" style="height: 36vh;width: 10%;float: right;">
+			<img src="./pic/diamond1.png" style="width: 150%;transform:rotate(0deg);margin-top: 130%;margin-left: 31%" id="backbtn">
+		</div>
+		<div class="col-md-2" style="height: 36vh;width: 35%;float: right;">
+			<div style="" id="Mapdiv">
+				<div style="margin-top: 40%;margin-left: 30%;text-align:center;width: 100%" id="dsa">
+					<span style="font-size:72px;font-weight: 600;color:white;margin-top: 20%;margin-left:18%;z-index:99" id="Maptext">M A P</span>
+				</div>
+					<img src="./pic/circle2.png" width="100%" style="position: absolute;left:32%;top:5%;z-index:-1">
+					<!-- <img src="./pic/power_25.png" width="35%" style="position: absolute;left:50%;top:84%;"> -->
+				<!-- </div> -->
+				
+			</div>
+		</div>
+		<div class="col-md-1" style="height: 36vh;width: 6%;position: relative;float: right;"id="UPdiv_2-1"></div>
+	<!-- 	<div class="col-md-2" style="height: 36vh;width: 28%;float: right;"></div>
+		<div class="col-md-2" style="height: 36vh;width: 28%;float: right;"></div> -->
+		<!-- <div class="col-md-3" style="height: 36vh;width: 27%;float: right;"></div> -->
+	</div>
+
+
+	<div class="row" style="height: 32vh"> 
+		
+		
+		
+		
+		
+		<div class="col-md-2" style="height: 32vh;width: 10%;float: right;"></div>
+
+		<div class="col-md-1" style="height: 32vh;width: 6%;float: right;"></div>
+		<div class="col-md-2" style="height: 32vh;width: 23%;float: right;"></div>
+		<div class="col-md-1" style="height: 32vh;width: 6%;float: right;position: relative;">
+			<div style="width:100%;height:70px;margin: auto;position: absolute;left:115%;right: 0;top:-22%;" id="UPdiv_3">
+				<img src="./pic/diamond1.png" style="width: 100%;transform:rotate(155deg);position: absolute;top:-75%"  id="UP_2">
+				<img src="./pic/arrow.png" id="click_point4" class="click_pointL2" width="100%" style="max-width: 100%;position: absolute;margin-left: 50%;transform:rotate(150deg);">
+			</div>
+		</div>
+		<div class="col-md-2" style="height: 32vh;width: 28%;float: right;margin-top: -10%">
+			<div style="width:100%;height:17.5vh;margin: auto;position: absolute;left:28%;right: 0;top:-13%;bottom:0"  id="block2">
+			<img src="./pic/border3.png" width="85%" style="position: absolute;top:-10px;left:10px;z-index: -1;" id="border2_img">
+			<img src="./pic/complete.png" style="max-width: 65%;position: absolute;left:-13%;top:-13%;transform:rotate(-5deg);margin-left: -5%" id="stamp2"> 
+				<div style="margin-top: 10%;text-align:center;width: 90%"><span style="font-size:60px;font-weight: 600;color:white;margin-top: 20%;z-index: 99;" id="B2text">3</span></div>
+			</div>
+		</div>
+		<div class="col-md-3" style="height: 32vh;width: 27%;float: right;">
+			
+		</div>
+	</div>
+	<div class="row" style="height: 12vh"> 
+	
+	</div>
+</div>
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<!-- <script src="script/R_map1.js"></script> -->
+<script src="script/layers2.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>

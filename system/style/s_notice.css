@@ -1,0 +1,62 @@
+#notice_border
+{
+	width: 95%;
+	height: 70vh;
+	margin-left: auto;
+    margin-right: auto;
+    background: rgb(118,72,0,0.3);
+    border: 15px solid #5C3804;
+    border-radius: 75px;
+    text-align: center;	
+    /*margin-top: 15%*/
+}
+.border
+{
+	animation: showborder 1s ;
+	animation-fill-mode:forwards;
+}
+.font
+{	opacity:0;
+	animation: font 0.5s ;
+	 animation-delay:1s;
+	animation-fill-mode:forwards;
+}
+#notice_text
+{
+	font-weight: 900;
+	font-size: 40px;
+}
+.disapear
+{
+	display: none;
+}
+ul li
+{
+  text-align: left;
+  font-size: 28px;
+}
+
+@keyframes showborder{  /*紅色point指標*/
+        0%{
+            
+            width:0ch
+            
+          }
+        
+        100%
+          {
+            width: 95ch          
+          }
+  }
+@keyframes font{  /*紅色point指標*/
+        0%{
+            
+            opacity:0;
+            
+          }
+        
+        100%
+          {
+            opacity:1;
+          }
+  }

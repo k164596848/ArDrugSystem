@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>心智圖</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/situation.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+</head>
+<body >
+	<div class="container-fuild">	
+	
+		<div style="background-size:100%;height:87vh;background-repeat:no-repeat;"  id="situation"></div>
+		<div style="width:100%;height:25vh;background:linear-gradient(350deg, rgba(0,0,0,1), transparent 155%);position: absolute;bottom: 0px;font-size: 32px;color:white;padding-left: 5%;padding-top: 1%;" id="con_div">
+			<div style="width:60%;margin-right: auto;margin-left: auto">
+				<p style="opacity:1;" id="conversation" class="conversation">這裡是我的對話 謝謝</p>
+				<img src="./pic/end.png" style="width:30%;position: absolute;bottom:0;right:0" id="endimg">
+			</div>
+			 
+		</div>
+		<div style="font-size: 24px;width: 22%;height: 50px;background:linear-gradient(-135deg, transparent 38px,rgba(0,0,0))top right;position: absolute;border-top-left:15px;bottom:28.5%;left:28%" id="name_div">
+			<p style="position:absolute;margin-top:3%;color: white;margin-left: 22%" id="role_name">這是人名</p>
+		</div>
+		<!-- <div style="width: 200px;height:84px;position: absolute;left: 0;right: 0;margin: auto;top: 23%;" id="end_div" class="disapear">
+			<button class="btn btn-primary" style="font-size: 40px;border:8px solid rgb(223, 45, 45);border-radius: 11px;background: #FFF; color: #980014;" id="end_btn">結束遊戲</button>
+		</div> -->
+		
+		<!--三角形-->
+		<!-- <div style="border-top:15px solid white;border-left:12.5px solid transparent;border-right:12.5px solid transparent;width:0;height:0;position: absolute;bottom: 10px;right:30%;">
+		</div> -->
+		<!--人形立牌-->
+		<!-- <div style="width: 30%;height: 80%;background-color:;position: absolute;right:0;bottom:0"> -->
+			<img src="" style="max-height:100%;position: absolute;bottom:0;right:0;width:25%" id="B">
+			<img src="" style="max-height:100%;position: absolute;bottom:0;left:0;width:25%" id="A">
+		<!-- </div> -->
+		<div style="width: 55%;margin-left: auto;margin-right: auto;position: absolute;top:0;left:0;right:0">
+			<button  class="btn btn-primary disapear opt" value="" id="btnA" style="width: 100%">擔心是不是詐騙</button>
+			<button  class="btn btn-primary disapear opt" value="" id="btnB" style="width: 100%">擔心是不是詐騙</button>
+			<button  class="btn btn-primary disapear opt" value="" id="btnC" style="width: 100%">擔心是不是詐騙</button>
+			<button  class="btn btn-primary disapear opt" value="" id="btnD" style="width: 100%">擔心是不是詐騙</button>
+			<button  class="btn btn-primary disapear opt" value="" id="btnE" style="width: 100%">擔心是不是詐騙</button>
+		</div>
+	</div>
+	<div  style="background: rgba(0,0,0,0.7); width: 90%;height: 85vh;position: absolute;z-index: 99;top: 4%;left: 5%;" id="the_end" class="disapear">
+		<div style="color: white;font-size: 36px;position: absolute;left: 2%;top: 19%;letter-spacing: 2px;">
+			<div style="width: 85vw;height:70vh;">
+				<p id="endconversation"></p>
+			</div>
+
+		</div>
+		<img src="./pic/end.png" style="width:40%;position: absolute;bottom:0;right:0">
+	</div>
+	
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="script/situation.js"></script>
+</html>

@@ -1,0 +1,109 @@
+<html>
+<meta charset="utf-8">
+<head>
+<link href="./style/main.css" rel="stylesheet">
+</head>
+<body id="websiteIndex-body">   
+    <div class="frame-wrapper container container-fluid ">    
+        <div id="content-panel" class="optOpen">
+            <div id="content-wrapper">
+               <div class="panel panel-default">
+                    <div class="panel-body">
+                       <blockquote class="marginBottom-0">
+                          <h3>
+                            <ol class="breadcrumb">                     
+                              <li class="active">系統維護</li>
+                              <li><a href="Userdefend?param1=F3C">使用者維護</a></li> 
+                            </ol>                      
+                          </h3>
+                        </blockquote>
+                    </div>
+                </div>
+               <div class="panel panel-default" id="Userdefend">
+                    <div class="panel-body">
+                      <div class="row">
+                                  <div class="form-group col-lg-6">
+                                    <label for="editusername" class="control-label">姓名</label>
+                                    <input type="text" class="form-control" name="editusername" id="editusername" disabled>
+                                  </div>
+                                  
+                                  <div class="form-group col-lg-6">
+                                  <label for="s_name" class="control-label">主管姓名</label>
+                                    <select class="form-control" name="s_name" id="s_name" disabled>
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                    <label for="editextension" class="control-label">分機</label>
+                                    <input type="text" class="form-control" name="editextension" id="editextension" required>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                    <label for="s_extension" class="control-label">主管分機</label>
+                                    <select class="form-control" name="s_extension" id="s_extension" disabled>
+                                      </select>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                    <label for="editusermail" class="control-label">信箱(登入帳號)</label>
+                                    <input type="text" class="form-control" name="editusermail" id="editusermail" disabled>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                    <label for="s_email" class="control-label">主管信箱</label>
+                                    <select class="form-control" name="s_email" id="s_email" disabled>
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                    <label for="edituserpsw" class="control-label">密碼</label>       
+                                    <div class="input-group">       
+                                       <input type="password" class="form-control" name="edituserpsw" id="edituserpsw">
+                                      <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="show_userpsw"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                    <label for="confirm_userpsw" class="control-label">確認密碼</label>                                    
+                                    <div class="input-group">
+                                       <input type="password" class="form-control" name="confirm_userpsw" id="confirm_userpsw" data-match="#userpsw" data-match-error="與密碼不符">
+                                      <div class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="show_confirm_userpsw"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                      </div>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                    <label for="d_id" class="control-label">部門</label>
+                                     <select class="form-control" name="d_id" id="d_id" disabled>
+                                     
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-lg-6" >
+                                    <br></div>
+                                  <div class="form-group col-lg-6" hidden="">
+                                    <label for="editrights" class="control-label">狀態</label>
+                                     <select class="form-control" name="editrights" id="editrights" disabled>
+                                       <option>一般用戶</option>
+                                        <option>超級使用者</option>
+                                    </select>
+                                  </div>
+                                  
+                                <div class="footer" align="right" style="margin-right: 15px;">
+                                <button type="reset" class="btn btn-warning" id="ResetBt">放棄</button>
+                                <button type="button" class="btn btn-success" id="editUserBT">修改</button>
+                                </div>
+                      </div>
+                    </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        </body>
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="plugin/jquery/jquery.dataTables.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="plugin/bootstrap/js/validator.min.js"></script>
+<script src="plugin/jquery/sweetalert.min.js"></script>
+<script src="script/websiteInit.js"></script>
+<script src="script/userdefend.js"></script>
+<!-- <script src="script/dashboardIndex.js"></script> -->
+</html>

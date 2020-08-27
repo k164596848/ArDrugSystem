@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>情境RPG</title>
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/rpg_result.css">
+	<link rel="stylesheet" type="text/css" href="./style/common.css">
+	
+	<script src="https://blocklypro.webduino.io/node_modules/jquery/dist/jquery.min.js?rev=2f6b11a7e914718e0290410e85366fe9"></script>
+	<script src="https://blocklypro.webduino.io/dist/lib/webduino-all-0.4.20.min.js?rev=4426739c00d85325cb2d3d701fa50666"></script>
+	<script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js?rev=ad06da24174defd84a3752446fc7b672"></script>
+	<script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js?rev=c0bfd493efd477d098a4ae9e92b13880"></script>
+	<script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js?rev=683a69503433786202911b4d9f766100"></script>
+	<script src="https://buberhu.github.io/webduino_LINE_V3/main.js"></script>
+
+</head>
+<body>
+	
+
+	<div class="container-fuild" style="height: 100vh;background-size: 100%;">
+		<div style="width: 95%;margin-left: auto;margin-right: auto;height: 300px">
+			<div style="width: 90%;height:0;position: absolute;background-color: #f3f5dc;top: 5%;left: 5%;z-index: 1;/* opacity: 0.8; */border-radius: 17px;" class="big">
+				<!-- <div class='disapear' id="item"> -->
+				<div style="width: 96%;height: 83vh;background: white;position: absolute;top: 4%;left: 2%;z-index: -1;" id="whitebg" class="disapear"></div>
+				<img src="./pic/mater.png" style="width:8%;transform: rotate(-14deg);position: absolute;z-index: 1;" id="mater" class="disapear">
+
+				<div style="width: 19vw;height:20vw;border:4px solid #aaaaaa;position: absolute;right: 5%;top: 9%;" id="role" class="disapear">
+					<img src="./pic/role/A.png" width="100%">
+				</div>
+
+				<img src="./pic/note.png" style="width: 35%;z-index: 0;position: absolute;left: 3%;top: 4%;" class="disapear" id="note">
+				<img src="./pic/secret.png" style="width: 25%;position: absolute;z-index: 99;right: 0;bottom: 5px;margin-right: -4%;" id="secret" class="disapear">
+				<span style="width: 29%;height: 12vh;position: absolute;right: 1%;top: 45%;text-align: center;font-size: 30px;font-weight: 900; text-decoration-line: underline;color: black;" id="personattr" class="disapear"><span id="persontype">外向</span>的孩子</span>
+				<div style="position: absolute;top:28%;left: 8%">
+					<img src="./pic/type1.png" width="68%" class="disapear" id="typeimg">
+					<i ><span style="position: absolute;left:18%;font-size: 40px;top:17%;font-weight:900;" id="typetext" class="disapear">適合強硬拒絕法</span></i>
+				</div>
+				<div style="width: 90%;height: 40%;left: 5%;bottom:6%;position:absolute;" id="textbox" class="disapear">
+					<img src="./pic/textbox.png" style="max-height: 75%;width: 100%">
+					<h4 style="position:absolute;top:25px;width:90%;font-size: 28px;left:5%" id="attrtext" class="disapear">擁有良好的危機意識</h4>
+				</div>
+
+				<button style="left: 0;right: 0;position: absolute;margin: auto;bottom: 5%;font-size: 30px;border: 4px solid;" id="backindex" class="disapear">關閉檔案</button>
+			</div>
+			<div style="width: 15%; margin-top: 5%;height: 300px;margin-left: 4.5%;position: absolute;border-radius: 20px;border:2px solid #483c3c;  background: #f2f2f2;" id="card0">
+			<img src="./pic/role/B.png" id="title" class="title">
+			</div>
+			<div style="width: 15%; margin-top: 5%; height: 300px;float: left;position: absolute;left:25%;border-radius: 20px;border:2px solid #483c3c;  background: #f2f2f2;" id="card1">
+				<img src="./pic/role/C.png"  id="title" class="title">
+			</div>
+			<div style="width: 15%; margin-top: 5%; height: 300px;float: left;position: absolute;left:43%;border-radius: 20px;border:2px solid #483c3c;  background: #f2f2f2;"id="card2" >
+				<img src="./pic/role/B.png"id="title" class="title"style="position:absolute">
+			</div>
+			<div style="width:15%; margin-top: 5%;height: 300px;float: left;position: absolute;left:61%;border-radius: 20px;border:2px solid #483c3c;  background: #f2f2f2;" class="cardpic card">
+				<img src="./pic/role/A.png"  id="title" class="title" style="position:absolute;">
+			</div>
+			<div  id="card4" class="cardpic">
+				<img src="./pic/role/C.png" id="title" class="title">
+			</div>
+		</div>
+		<div>
+		
+		</div>
+		
+	</div>
+
+</body>
+	
+<script src="plugin/jquery/jquery.min.js"></script>
+<script src="script/rpg_result.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+</html>
